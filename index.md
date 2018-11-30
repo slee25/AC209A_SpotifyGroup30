@@ -1,5 +1,5 @@
 ---
-title: AC209A Final Project - Automatic Spotify Playlist Generation
+title: AC209A Final Project - Automatic Playlist Generation
 ---
 
 by Chih-Kang Chang, Jinsoo Kim, and Sangjun Lee (Group #30)
