@@ -1,0 +1,9 @@
+theme: jekyll-theme-primer
+title: Project description
+description: Copied _config.yml given in Lab 11
+baseurl:
+markdown: kramdown
+kramdown:
+    math_engine: mathjax
+    input: GFM
+    syntax_highlighter: rouge
