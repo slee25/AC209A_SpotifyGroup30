@@ -1,5 +1,6 @@
 ---
 title: AC209A Final Project: Automatic Playlist Generation
+nav_include: 0
 ---
 
 Chih-Kang Chang, Jinsoo Kim, and Sangjun Lee (Group #30)
