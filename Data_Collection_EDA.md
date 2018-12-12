@@ -67,7 +67,9 @@ playlist_data['playlists'][0]
 
 - Spotify Web API (https://developer.spotify.com/documentation/web-api/) is a developer's tool provided by Spotify, particularly for developing web applications related to Spotify. Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue. Web API also provides access to user related data, like playlists and music that the user saves in the Your Music library. Such access is enabled through selective authorization, by the user. The API provides a set of endpoints, each with its own unique path. To access private data through the Web API, such as user profiles and playlists, an application must get the user's permission to access the data. Authorization is via the Spotify Accounts service.
 
+
 <img src="https://developer.spotify.com/assets/WebAPI_intro.png" width="600" height="250">
+
 
 - For this project, we have used Spotipy (https://spotipy.readthedocs.io/), which is a lightweight Python library for the Spotify Web API. With Spotipy we can get full access to all of the music data provided by the Spotify platform. Below we list some key function endpoints provided by Spotipy.
 
@@ -167,25 +169,39 @@ sp.album(ALBUM_URI)
 
 - `spotipy.Spotify().audio_features(track_uri)`: Get audio feature information for a single track identified by its unique Spotify ID. (https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/)
     - `danceability` (float): Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.
+    
     <img src="https://developer.spotify.com/assets/audio/danceability.png" width="600" height="250">
+    
     - `energy` (float): Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.
+    
     <img src="https://developer.spotify.com/assets/audio/energy.png" width="600" height="250">
+    
     - `Key` (int): The estimated overall key of the track. Integers map to pitches using standard `Pitch Class notation`. E.g. 0 = C, 1 = C♯/D♭, 2 = D, and so on. If no key was detected, the value is -1.
     - `loudness` (float): The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typical range between -60 and 0 db.
+    
     <img src="https://developer.spotify.com/assets/audio/loudness.png" width="600" height="250">
+    
     - `mode` (int): Mode indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived. Major is represented by 1 and minor is 0.
     - `speechiness` (float): Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks.
     <img src="https://developer.spotify.com/assets/audio/speechiness.png" width="600" height="250">
     - `acousticness` (float): A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.
     <img src="https://developer.spotify.com/assets/audio/acousticness.png" width="600" height="250">
     - `instrumentalness` (float): Predicts whether a track contains no vocals. “Ooh” and “aah” sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly “vocal”. The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.
+    
     <img src="https://developer.spotify.com/assets/audio/instrumentalness.png" width="600" height="250">
+    
     - `liveness` (float): Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.
+    
     <img src="https://developer.spotify.com/assets/audio/liveness.png" width="600" height="250">
+    
     - `valence` (float): A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+    
     <img src="https://developer.spotify.com/assets/audio/valence.png" width="600" height="250">
+    
     - `tempo` (float): The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.
+    
     <img src="https://developer.spotify.com/assets/audio/tempo.png" width="600" height="250">
+    
     - `type` (string): The object type, `audio_features`.
     - `id` (string): The `Spotify ID` for the track.
     - `uri` (string): The `Spotify URI` for the track.
@@ -254,7 +270,9 @@ sp.artist_top_tracks(ARTIST_URI)
 
 
 - Below shows a screen capture of https://genius.com/Missy-elliott-lose-control-lyrics, which is the 0th track in the 0th playlist in the 0th file, along with the developer tool.
-<img src="fig\Genius.png" width="635" height="460">
+
+
+<img src="https://raw.githubusercontent.com/slee25/AC209A_SpotifyGroup30/master/notebooks/fig/Genius.png" width="635" height="460">
 
 
 - Below shows a html-parsed result of this page by using `requests` and `BeautifulSoup`:
@@ -289,7 +307,7 @@ requests.get('https://api.genius.com', data={'q': 'Lose Control Missy Elliott'},
 
 
 - Below shows a screen capture of http://lyrics.wikia.com/wiki/Missy_Elliott:Lose_Control, which is the 0th track in the 0th playlist in the 0th file, along with the developer tool.
-<img src="fig\LyricsWiki.png" width="635" height="460">
+<img src="https://raw.githubusercontent.com/slee25/AC209A_SpotifyGroup30/master/notebooks/fig/LyricsWiki.png" width="635" height="460">
 
 
 - Below shows a html-parsed result of this page by using `requests` and `BeautifulSoup`:
