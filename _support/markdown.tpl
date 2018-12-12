@@ -9,14 +9,23 @@
 {% block output_prompt %}
 {%- endblock output_prompt %}
 
-{% block input %}
-{% if cell.metadata.hide == True %}
+{% block input_group %}
+{% if cell.metadata.hide_input == True %}
 {% else %}
 ```{% if nb.metadata.language_info %}{{ nb.metadata.language_info.name }}{% endif %}
 {{ cell.source}}
 ```
 {% endif %}
-{% endblock input %}
+{% endblock input_group %}
+
+{% block output_group %}
+{% if cell.metadata.hide_output == True %}
+{% else %}
+```{% if nb.metadata.language_info %}{{ nb.metadata.language_info.name }}{% endif %}
+{{ cell.source}}
+```
+{% endif %}
+{% endblock output_group %}
 
 {% block error %}
 {{ super() }}
