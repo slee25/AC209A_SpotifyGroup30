@@ -1,5 +1,14 @@
+---
+title: Data Collection and EDA
+notebook: notebooks/Data_Collection_EDA.ipynb
+nav_include: 1
+---
 
-# Data Collection and EDA
+
+## Contents
+{:.no_toc}
+*  
+{: toc}
 
 
 
@@ -35,7 +44,7 @@
         - `album_name` (string): The name of the album of the track.
 
 
-- Below shows an example data format for the 0th playlist in the 0th file:
+- Below will show an example data format for the 0th playlist in the 0th file (output hidden):
 
 
 ```python
@@ -59,7 +68,9 @@ playlist_data['playlists'][0]
 - Spotify Web API (https://developer.spotify.com/documentation/web-api/) is a developer's tool provided by Spotify, particularly for developing web applications related to Spotify. Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue. Web API also provides access to user related data, like playlists and music that the user saves in the Your Music library. Such access is enabled through selective authorization, by the user. The API provides a set of endpoints, each with its own unique path. To access private data through the Web API, such as user profiles and playlists, an application must get the user's permission to access the data. Authorization is via the Spotify Accounts service.
 
 
+
 <img src="https://developer.spotify.com/assets/WebAPI_intro.png" width="600" height="250">
+
 
 
 - For this project, we have used Spotipy (https://spotipy.readthedocs.io/), which is a lightweight Python library for the Spotify Web API. With Spotipy we can get full access to all of the music data provided by the Spotify platform. Below we list some key function endpoints provided by Spotipy.
@@ -83,7 +94,7 @@ playlist_data['playlists'][0]
     - `uri` (string): The `Spotify URI` for the track.
     
     
-- Below shows an example data provided by `spotipy.Spotify().track(track_uri)` for the 0th track in the 0th playlist in the 0th file:
+- Below will show an example data provided by `spotipy.Spotify().track(track_uri)` for the 0th track in the 0th playlist in the 0th file (output hidden):
 
 
 ```python
@@ -175,7 +186,7 @@ sp.artist(ARTIST_URI)
     - `uri` (string): The `Spotify URI` for the album.
 
 
-- Below shows an example data provided by `spotipy.Spotify().album(album_uri)` for the album of the 0th track in the 0th playlist in the 0th file:
+- Below will show an example data provided by `spotipy.Spotify().album(album_uri)` for the album of the 0th track in the 0th playlist in the 0th file (output hidden):
 
 
 ```python
@@ -203,9 +214,13 @@ sp.album(ALBUM_URI)
     
     - `mode` (int): Mode indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived. Major is represented by 1 and minor is 0.
     - `speechiness` (float): Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks.
+    
     <img src="https://developer.spotify.com/assets/audio/speechiness.png" width="600" height="250">
+    
     - `acousticness` (float): A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.
+    
     <img src="https://developer.spotify.com/assets/audio/acousticness.png" width="600" height="250">
+    
     - `instrumentalness` (float): Predicts whether a track contains no vocals. “Ooh” and “aah” sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly “vocal”. The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.
     
     <img src="https://developer.spotify.com/assets/audio/instrumentalness.png" width="600" height="250">
@@ -353,6 +368,7 @@ requests.get('https://api.genius.com', data={'q': 'Lose Control Missy Elliott'},
 
 
 - Below shows a screen capture of http://lyrics.wikia.com/wiki/Missy_Elliott:Lose_Control, which is the 0th track in the 0th playlist in the 0th file, along with the developer tool.
+
 <img src="https://raw.githubusercontent.com/slee25/AC209A_SpotifyGroup30/master/notebooks/fig/LyricsWiki.png" width="635" height="460">
 
 
@@ -407,6 +423,8 @@ mode(playlist_stat[:,4])
 
 
 
+![png](Data_Collection_EDA_files/Data_Collection_EDA_31_0.png)
+
 
 
 
@@ -434,6 +452,8 @@ plt.show()
 
 
 
+
+![png](Data_Collection_EDA_files/Data_Collection_EDA_34_0.png)
 
 
 

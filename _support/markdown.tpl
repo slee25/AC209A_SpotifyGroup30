@@ -44,6 +44,10 @@
 {{ output.text | indent }}
 {% endblock stream %}
 
+{% block data_png %}
+![png]({{ output.metadata.filenames['image/png'] | path2url }})
+{% endblock data_png %}
+
 {% block data_svg %}
 ![svg]({{ output.metadata.filenames['image/svg+xml'] | path2url }})
 {% endblock data_svg %}
