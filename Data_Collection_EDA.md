@@ -1,14 +1,5 @@
----
-title: Data Collection and EDA
-notebook: notebooks/Data_Collection_EDA.ipynb
-nav_include: 1
----
 
-
-## Contents
-{:.no_toc}
-*  
-{: toc}
+# Data Collection and EDA
 
 
 
@@ -127,10 +118,39 @@ sp.artist(ARTIST_URI)
 
 
 
-```python
-ARTIST_URI = playlist_data['playlists'][0]['tracks'][0]['artist_uri']
-sp.artist(ARTIST_URI)
-```
+
+
+
+
+    {'external_urls': {'spotify': 'https://open.spotify.com/artist/2wIVse2owClT7go1WT98tk'},
+     'followers': {'href': None, 'total': 909670},
+     'genres': ['dance pop',
+      'hip hop',
+      'hip pop',
+      'pop',
+      'pop rap',
+      'r&b',
+      'rap',
+      'southern hip hop',
+      'urban contemporary'],
+     'href': 'https://api.spotify.com/v1/artists/2wIVse2owClT7go1WT98tk',
+     'id': '2wIVse2owClT7go1WT98tk',
+     'images': [{'height': 640,
+       'url': 'https://i.scdn.co/image/055260c034b93dae018b8cd70bc9f1acc2843af3',
+       'width': 640},
+      {'height': 320,
+       'url': 'https://i.scdn.co/image/2642935f38deb4f2305cabfd996babec8796d469',
+       'width': 320},
+      {'height': 160,
+       'url': 'https://i.scdn.co/image/11323b9db35fb2b10c1676a0eeeb5ff8a4ed32e8',
+       'width': 160}],
+     'name': 'Missy Elliott',
+     'popularity': 76,
+     'type': 'artist',
+     'uri': 'spotify:artist:2wIVse2owClT7go1WT98tk'}
+
+
+
 
 
 - `spotipy.Spotify().album(album_uri)`: Get Spotify catalog information for a single album. (https://developer.spotify.com/documentation/web-api/reference/albums/get-album/)
@@ -221,10 +241,31 @@ sp.audio_features(TRACK_URI)
 
 
 
-```python
-TRACK_URI = playlist_data['playlists'][0]['tracks'][0]['track_uri']
-sp.audio_features(TRACK_URI)
-```
+
+
+
+
+    [{'danceability': 0.904,
+      'energy': 0.813,
+      'key': 4,
+      'loudness': -7.105,
+      'mode': 0,
+      'speechiness': 0.121,
+      'acousticness': 0.0311,
+      'instrumentalness': 0.00697,
+      'liveness': 0.0471,
+      'valence': 0.81,
+      'tempo': 125.461,
+      'type': 'audio_features',
+      'id': '0UaMYEvWZi0ZqiDOoHU3YI',
+      'uri': 'spotify:track:0UaMYEvWZi0ZqiDOoHU3YI',
+      'track_href': 'https://api.spotify.com/v1/tracks/0UaMYEvWZi0ZqiDOoHU3YI',
+      'analysis_url': 'https://api.spotify.com/v1/audio-analysis/0UaMYEvWZi0ZqiDOoHU3YI',
+      'duration_ms': 226864,
+      'time_signature': 4}]
+
+
+
 
 
 - `spotipy.Spotify().artist_related_artists(artist_uri)`: Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community's listening history.
@@ -296,9 +337,14 @@ requests.get('https://api.genius.com', data={'q': 'Lose Control Missy Elliott'},
 
 
 
-```python
-requests.get('https://api.genius.com', data={'q': 'Lose Control Missy Elliott'}, headers={'Authorization': 'Bearer ' + Genius_TOKEN}).text
-```
+
+
+
+
+    '{"meta":{"status":403,"message":"Action forbidden for current scope"}}'
+
+
+
 
 
 ### (4) Lyrics Wiki
@@ -359,17 +405,16 @@ mode(playlist_stat[:,4])
 
 
 
-```python
-plt.figure(figsize=[8,6])
-plt.hist(playlist_stat[:,4],bins=50)
-plt.title('distribution of the number of tracks in a playlist')
-plt.xlabel('counts of playlist')
-plt.ylabel('number of tracks')
-plt.show()
 
-from statistics import mode
-mode(playlist_stat[:,4])
-```
+
+
+
+
+
+    20.0
+
+
+
 
 
 - Thus, the number of tracks in a playlist shows a right-skewed distribution and the most fequent number is 20.
@@ -388,14 +433,9 @@ plt.show()
 
 
 
-```python
-plt.figure(figsize=[8,6])
-plt.hist(playlist_stat[:,3], bins=50, log=True)
-plt.title('distribution of the number of followers in a playlist (log-scale)')
-plt.xlabel('counts of playlist')
-plt.ylabel('number of followers')
-plt.show()
-```
+
+
+
 
 
 - Note that, this is in log scale. As shown, a majority of the playlists has 1 follower (the creater of the playlist themselves), and only few playlists has 10000+ followers.
@@ -410,10 +450,14 @@ playlist_stat_55.shape[0]
 
 
 
-```python
-playlist_stat_55 = playlist_stat[playlist_stat[:,4]>55,:]
-playlist_stat_55.shape[0]
-```
+
+
+
+
+    447703
+
+
+
 
 
 - Among the 447703 playlists selected, depending on the number of followers that we select as the lower bound, the final number of eligible playlists is like below:
@@ -430,14 +474,15 @@ print(5, '\t\t', sum(playlist_stat_55[:,3]>=5))
 
 
 
-```python
-print('[followers]\t[playlists]')
-print(40, '\t\t', sum(playlist_stat_55[:,3]>=40))
-print(30, '\t\t', sum(playlist_stat_55[:,3]>=30))
-print(20, '\t\t', sum(playlist_stat_55[:,3]>=20))
-print(10, '\t\t', sum(playlist_stat_55[:,3]>=10))
-print(5, '\t\t', sum(playlist_stat_55[:,3]>=5))
-```
+
+    [followers]	[playlists]
+    40 		 919
+    30 		 1211
+    20 		 1852
+    10 		 5070
+    5 		 20726
+    
+
 
 
 - This indicates that, if we select the lower bound of the number of followers as 20 based on the criteria above, 1852 playlists out of 1 million will be eligible. We believe 1852 to 1000 is a reasonable down-sampling rate, so we sampled 1000 playlists among these 1852 playlists by using `np.random.seed(0)` and `np.random.choice` (separate ipynb and pdf are attached).
@@ -482,12 +527,308 @@ display(playlists_df_sort.shape)
 
 
 
-```python
-playlists_df_sort = pd.read_pickle('data/playlists_df_sort.pkl')
-display(playlists_df_sort.head())
-display(playlists_df_sort.describe())
-display(playlists_df_sort.shape)
-```
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>album_name</th>
+      <th>album_uri</th>
+      <th>artist_name</th>
+      <th>artist_uri</th>
+      <th>collaborative</th>
+      <th>description</th>
+      <th>duration_ms</th>
+      <th>modified_at</th>
+      <th>name</th>
+      <th>num_albums</th>
+      <th>num_artists</th>
+      <th>num_edits</th>
+      <th>num_followers</th>
+      <th>num_tracks</th>
+      <th>pid</th>
+      <th>playlist_duration_ms</th>
+      <th>pos</th>
+      <th>track_name</th>
+      <th>track_uri</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>127 Hours</td>
+      <td>spotify:album:70wOJPVD0SKMn0DtddtZP3</td>
+      <td>Free Blood</td>
+      <td>spotify:artist:58cwi0vXDQEihBLREQTBGG</td>
+      <td>false</td>
+      <td></td>
+      <td>351640</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>0</td>
+      <td>Never Hear Surf Music Again</td>
+      <td>spotify:track:0PxPcrfAXNu0MpKRwdlbuc</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Waves</td>
+      <td>spotify:album:2R6wefBXnMzCkRoqD7FdNk</td>
+      <td>Joey Bada$$</td>
+      <td>spotify:artist:2P5sC9cVZDToPxyomzF1UH</td>
+      <td>false</td>
+      <td></td>
+      <td>213333</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>1</td>
+      <td>Waves</td>
+      <td>spotify:track:1fb6b2Mas9q2mWxJazzeRI</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Every Kingdom</td>
+      <td>spotify:album:2MxcbOGFi99D9JACvj74AH</td>
+      <td>Ben Howard</td>
+      <td>spotify:artist:5schNIzWdI9gJ1QRK8SBnc</td>
+      <td>false</td>
+      <td></td>
+      <td>309346</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>2</td>
+      <td>The Wolves</td>
+      <td>spotify:track:3gqP2hxwgi6mb8FhtEe4zU</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Wasting Light</td>
+      <td>spotify:album:5lnQLEUiVDkLbFJHXHQu9m</td>
+      <td>Foo Fighters</td>
+      <td>spotify:artist:7jy3rLJdDQY21OgRLCZ9sD</td>
+      <td>false</td>
+      <td></td>
+      <td>286466</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>3</td>
+      <td>Bridge Burning</td>
+      <td>spotify:track:0bHD1nLe7Nhw55ZGJ92332</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sweet Disarray</td>
+      <td>spotify:album:2qg3JERQKBjZXvMBtvKR0y</td>
+      <td>Dan Croll</td>
+      <td>spotify:artist:5Rr15NSbi1Xjno1AEP9u21</td>
+      <td>false</td>
+      <td></td>
+      <td>196848</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>4</td>
+      <td>From Nowhere</td>
+      <td>spotify:track:5c9YHjSjEZxaCxsF1Gy5Jt</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>duration_ms</th>
+      <th>modified_at</th>
+      <th>num_albums</th>
+      <th>num_artists</th>
+      <th>num_edits</th>
+      <th>num_followers</th>
+      <th>num_tracks</th>
+      <th>pid</th>
+      <th>playlist_duration_ms</th>
+      <th>pos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5.500000e+04</td>
+      <td>5.500000e+04</td>
+      <td>55000.000000</td>
+      <td>55000.00000</td>
+      <td>55000.000000</td>
+      <td>55000.000000</td>
+      <td>55000.000000</td>
+      <td>55000.000000</td>
+      <td>5.500000e+04</td>
+      <td>55000.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2.350665e+05</td>
+      <td>1.481653e+09</td>
+      <td>88.700000</td>
+      <td>64.90000</td>
+      <td>38.719000</td>
+      <td>471.814000</td>
+      <td>126.793000</td>
+      <td>497957.939000</td>
+      <td>2.964576e+07</td>
+      <td>27.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>7.615811e+04</td>
+      <td>3.638871e+07</td>
+      <td>46.491755</td>
+      <td>37.78886</td>
+      <td>32.297601</td>
+      <td>2867.397217</td>
+      <td>53.436149</td>
+      <td>287955.184373</td>
+      <td>1.318153e+07</td>
+      <td>15.874652</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2.060000e+02</td>
+      <td>1.298765e+09</td>
+      <td>4.000000</td>
+      <td>3.00000</td>
+      <td>2.000000</td>
+      <td>20.000000</td>
+      <td>56.000000</td>
+      <td>1923.000000</td>
+      <td>9.243679e+06</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.968930e+05</td>
+      <td>1.468260e+09</td>
+      <td>55.000000</td>
+      <td>40.00000</td>
+      <td>12.000000</td>
+      <td>25.000000</td>
+      <td>81.000000</td>
+      <td>256333.750000</td>
+      <td>1.872908e+07</td>
+      <td>13.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.251460e+05</td>
+      <td>1.498046e+09</td>
+      <td>81.000000</td>
+      <td>60.00000</td>
+      <td>32.000000</td>
+      <td>39.000000</td>
+      <td>115.500000</td>
+      <td>495125.000000</td>
+      <td>2.681876e+07</td>
+      <td>27.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2.611548e+05</td>
+      <td>1.507615e+09</td>
+      <td>117.000000</td>
+      <td>86.25000</td>
+      <td>54.000000</td>
+      <td>104.000000</td>
+      <td>166.000000</td>
+      <td>742869.750000</td>
+      <td>3.841217e+07</td>
+      <td>41.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4.504400e+06</td>
+      <td>1.509494e+09</td>
+      <td>234.000000</td>
+      <td>194.00000</td>
+      <td>179.000000</td>
+      <td>53519.000000</td>
+      <td>250.000000</td>
+      <td>997547.000000</td>
+      <td>9.654618e+07</td>
+      <td>54.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+    (55000, 19)
+
+
 
 
 - As shown, the initial data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 19, but only 10 of them are numeric, indicating there are not enough numeric data to build model and make prediction.

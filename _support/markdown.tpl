@@ -21,9 +21,7 @@
 {% block output_group %}
 {% if cell.metadata.hide_output == True %}
 {% else %}
-```{% if nb.metadata.language_info %}{{ nb.metadata.language_info.name }}{% endif %}
-{{ cell.source}}
-```
+{{ super() }}
 {% endif %}
 {% endblock output_group %}
 
