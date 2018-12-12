@@ -100,435 +100,17 @@ playlist_data['playlists'][0]
 
 
 
+    ---------------------------------------------------------------------------
 
+    AttributeError                            Traceback (most recent call last)
 
-    {'name': 'Throwbacks',
-     'collaborative': 'false',
-     'pid': 0,
-     'modified_at': 1493424000,
-     'num_tracks': 52,
-     'num_albums': 47,
-     'num_followers': 1,
-     'tracks': [{'pos': 0,
-       'artist_name': 'Missy Elliott',
-       'track_uri': 'spotify:track:0UaMYEvWZi0ZqiDOoHU3YI',
-       'artist_uri': 'spotify:artist:2wIVse2owClT7go1WT98tk',
-       'track_name': 'Lose Control (feat. Ciara & Fat Man Scoop)',
-       'album_uri': 'spotify:album:6vV5UrXcfyQD1wu4Qo2I9K',
-       'duration_ms': 226863,
-       'album_name': 'The Cookbook'},
-      {'pos': 1,
-       'artist_name': 'Britney Spears',
-       'track_uri': 'spotify:track:6I9VzXrHxO9rA9A5euc8Ak',
-       'artist_uri': 'spotify:artist:26dSoYclwsYLMAKD3tpOr4',
-       'track_name': 'Toxic',
-       'album_uri': 'spotify:album:0z7pVBGOD7HCIB7S8eLkLI',
-       'duration_ms': 198800,
-       'album_name': 'In The Zone'},
-      {'pos': 2,
-       'artist_name': 'Beyoncé',
-       'track_uri': 'spotify:track:0WqIKmW4BTrj3eJFmnCKMv',
-       'artist_uri': 'spotify:artist:6vWDO969PvNqNYHIOW5v0m',
-       'track_name': 'Crazy In Love',
-       'album_uri': 'spotify:album:25hVFAxTlDvXbx2X2QkUkE',
-       'duration_ms': 235933,
-       'album_name': 'Dangerously In Love (Alben für die Ewigkeit)'},
-      {'pos': 3,
-       'artist_name': 'Justin Timberlake',
-       'track_uri': 'spotify:track:1AWQoqb9bSvzTjaLralEkT',
-       'artist_uri': 'spotify:artist:31TPClRtHm23RisEBtV3X7',
-       'track_name': 'Rock Your Body',
-       'album_uri': 'spotify:album:6QPkyl04rXwTGlGlcYaRoW',
-       'duration_ms': 267266,
-       'album_name': 'Justified'},
-      {'pos': 4,
-       'artist_name': 'Shaggy',
-       'track_uri': 'spotify:track:1lzr43nnXAijIGYnCT8M8H',
-       'artist_uri': 'spotify:artist:5EvFsr3kj42KNv97ZEnqij',
-       'track_name': "It Wasn't Me",
-       'album_uri': 'spotify:album:6NmFmPX56pcLBOFMhIiKvF',
-       'duration_ms': 227600,
-       'album_name': 'Hot Shot'},
-      {'pos': 5,
-       'artist_name': 'Usher',
-       'track_uri': 'spotify:track:0XUfyU2QviPAs6bxSpXYG4',
-       'artist_uri': 'spotify:artist:23zg3TcAtWQy7J6upgbUnj',
-       'track_name': 'Yeah!',
-       'album_uri': 'spotify:album:0vO0b1AvY49CPQyVisJLj0',
-       'duration_ms': 250373,
-       'album_name': 'Confessions'},
-      {'pos': 6,
-       'artist_name': 'Usher',
-       'track_uri': 'spotify:track:68vgtRHr7iZHpzGpon6Jlo',
-       'artist_uri': 'spotify:artist:23zg3TcAtWQy7J6upgbUnj',
-       'track_name': 'My Boo',
-       'album_uri': 'spotify:album:1RM6MGv6bcl6NrAG8PGoZk',
-       'duration_ms': 223440,
-       'album_name': 'Confessions'},
-      {'pos': 7,
-       'artist_name': 'The Pussycat Dolls',
-       'track_uri': 'spotify:track:3BxWKCI06eQ5Od8TY2JBeA',
-       'artist_uri': 'spotify:artist:6wPhSqRtPu1UhRCDX5yaDJ',
-       'track_name': 'Buttons',
-       'album_uri': 'spotify:album:5x8e8UcCeOgrOzSnDGuPye',
-       'duration_ms': 225560,
-       'album_name': 'PCD'},
-      {'pos': 8,
-       'artist_name': "Destiny's Child",
-       'track_uri': 'spotify:track:7H6ev70Weq6DdpZyyTmUXk',
-       'artist_uri': 'spotify:artist:1Y8cdNmUJH7yBTd9yOvr5i',
-       'track_name': 'Say My Name',
-       'album_uri': 'spotify:album:283NWqNsCA9GwVHrJk59CG',
-       'duration_ms': 271333,
-       'album_name': "The Writing's On The Wall"},
-      {'pos': 9,
-       'artist_name': 'OutKast',
-       'track_uri': 'spotify:track:2PpruBYCo4H7WOBJ7Q2EwM',
-       'artist_uri': 'spotify:artist:1G9G7WwrXka3Z1r7aIDjI7',
-       'track_name': 'Hey Ya! - Radio Mix / Club Mix',
-       'album_uri': 'spotify:album:1UsmQ3bpJTyK6ygoOOjG1r',
-       'duration_ms': 235213,
-       'album_name': 'Speakerboxxx/The Love Below'},
-      {'pos': 10,
-       'artist_name': 'Nelly Furtado',
-       'track_uri': 'spotify:track:2gam98EZKrF9XuOkU13ApN',
-       'artist_uri': 'spotify:artist:2jw70GZXlAI8QzWeY2bgRc',
-       'track_name': 'Promiscuous',
-       'album_uri': 'spotify:album:2yboV2QBcVGEhcRlYuPpDT',
-       'duration_ms': 242293,
-       'album_name': 'Loose'},
-      {'pos': 11,
-       'artist_name': 'Jesse McCartney',
-       'track_uri': 'spotify:track:4Y45aqo9QMa57rDsAJv40A',
-       'artist_uri': 'spotify:artist:2Hjj68yyUPiC0HKEOigcEp',
-       'track_name': 'Right Where You Want Me - Radio Edit Version',
-       'album_uri': 'spotify:album:6022khQj4Fsvvse8f3A4lF',
-       'duration_ms': 211693,
-       'album_name': 'Right Where You Want Me'},
-      {'pos': 12,
-       'artist_name': 'Jesse McCartney',
-       'track_uri': 'spotify:track:1HwpWwa6bnqqRhK8agG4RS',
-       'artist_uri': 'spotify:artist:2Hjj68yyUPiC0HKEOigcEp',
-       'track_name': 'Beautiful Soul',
-       'album_uri': 'spotify:album:2gidE8vgVOkYufANjuvj3S',
-       'duration_ms': 214226,
-       'album_name': 'Beautiful Soul'},
-      {'pos': 13,
-       'artist_name': 'Jesse McCartney',
-       'track_uri': 'spotify:track:20ORwCJusz4KS2PbTPVNKo',
-       'artist_uri': 'spotify:artist:2Hjj68yyUPiC0HKEOigcEp',
-       'track_name': "Leavin'",
-       'album_uri': 'spotify:album:2tDCfKFy2YW9N0IwNSRdOJ',
-       'duration_ms': 216880,
-       'album_name': 'Departure - Recharged'},
-      {'pos': 14,
-       'artist_name': 'Cassie',
-       'track_uri': 'spotify:track:7k6IzwMGpxnRghE7YosnXT',
-       'artist_uri': 'spotify:artist:27FGXRNruFoOdf1vP8dqcH',
-       'track_name': 'Me & U',
-       'album_uri': 'spotify:album:0j1qzjaJmsF1FkcICf3hRu',
-       'duration_ms': 192213,
-       'album_name': 'Cassie'},
-      {'pos': 15,
-       'artist_name': 'Omarion',
-       'track_uri': 'spotify:track:1Bv0Yl01xBDZD4OQP93fyl',
-       'artist_uri': 'spotify:artist:0f5nVCcR06GX8Qikz0COtT',
-       'track_name': 'Ice Box',
-       'album_uri': 'spotify:album:4cVVEOXyUaWo7vlDWIkKsI',
-       'duration_ms': 256426,
-       'album_name': '21'},
-      {'pos': 16,
-       'artist_name': 'Avril Lavigne',
-       'track_uri': 'spotify:track:4omisSlTk6Dsq2iQD7MA07',
-       'artist_uri': 'spotify:artist:0p4nmQO2msCgU4IF37Wi3j',
-       'track_name': 'Sk8er Boi',
-       'album_uri': 'spotify:album:7h6XeTzy0SRXDrFJeA9gO7',
-       'duration_ms': 204000,
-       'album_name': 'Let Go'},
-      {'pos': 17,
-       'artist_name': 'Chris Brown',
-       'track_uri': 'spotify:track:7xYnUQigPoIDAMPVK79NEq',
-       'artist_uri': 'spotify:artist:7bXgB6jMjp9ATFy66eO08Z',
-       'track_name': 'Run It!',
-       'album_uri': 'spotify:album:49gaz5rhWWgqCw61M9700v',
-       'duration_ms': 229866,
-       'album_name': 'Chris Brown'},
-      {'pos': 18,
-       'artist_name': 'Beyoncé',
-       'track_uri': 'spotify:track:6d8A5sAx9TfdeseDvfWNHd',
-       'artist_uri': 'spotify:artist:6vWDO969PvNqNYHIOW5v0m',
-       'track_name': 'Check On It - feat. Bun B and Slim Thug',
-       'album_uri': 'spotify:album:3MJHoQUI828kmB6IpjejbW',
-       'duration_ms': 210453,
-       'album_name': "B'Day"},
-      {'pos': 19,
-       'artist_name': "Destiny's Child",
-       'track_uri': 'spotify:track:4pmc2AxSEq6g7hPVlJCPyP',
-       'artist_uri': 'spotify:artist:1Y8cdNmUJH7yBTd9yOvr5i',
-       'track_name': "Jumpin', Jumpin'",
-       'album_uri': 'spotify:album:283NWqNsCA9GwVHrJk59CG',
-       'duration_ms': 230200,
-       'album_name': "The Writing's On The Wall"},
-      {'pos': 20,
-       'artist_name': 'Sheryl Crow',
-       'track_uri': 'spotify:track:215JYyyUnrJ98NK3KEwu6d',
-       'artist_uri': 'spotify:artist:4TKTii6gnOnUXQHyuo9JaD',
-       'track_name': 'Soak Up The Sun',
-       'album_uri': 'spotify:album:5NYcTXrRZHxNyRKVOd0vs1',
-       'duration_ms': 292306,
-       'album_name': "C'Mon C'Mon"},
-      {'pos': 21,
-       'artist_name': 'The Black Eyed Peas',
-       'track_uri': 'spotify:track:0uqPG793dkDDN7sCUJJIVC',
-       'artist_uri': 'spotify:artist:1yxSLGMDHlW21z4YXirZDS',
-       'track_name': 'Where Is The Love?',
-       'album_uri': 'spotify:album:1bNyYpkDRovmErm4QeDrpJ',
-       'duration_ms': 272533,
-       'album_name': 'Elephunk'},
-      {'pos': 22,
-       'artist_name': 'Bowling For Soup',
-       'track_uri': 'spotify:track:19Js5ypV6JKn4DMExHQbGc',
-       'artist_uri': 'spotify:artist:5ND0mGcL9SKSjWIjPd0xIb',
-       'track_name': "Stacy's Mom",
-       'album_uri': 'spotify:album:3Q7xpHmP8k3HryE0LQdIk0',
-       'duration_ms': 193042,
-       'album_name': "I've Never Done Anything Like This"},
-      {'pos': 23,
-       'artist_name': 'The Click Five',
-       'track_uri': 'spotify:track:1JURww012QnWAw0zZXi6Aa',
-       'artist_uri': 'spotify:artist:01lz5VBfkMFDteSA9pKJuP',
-       'track_name': 'Just The Girl',
-       'album_uri': 'spotify:album:7gZilZGYr8M7UwEeYvdAKZ',
-       'duration_ms': 234146,
-       'album_name': 'Greetings From Imrie House'},
-      {'pos': 24,
-       'artist_name': 'Chris Brown',
-       'track_uri': 'spotify:track:7DFnq8FYhHMCylykf6ZCxA',
-       'artist_uri': 'spotify:artist:7bXgB6jMjp9ATFy66eO08Z',
-       'track_name': 'Yo (Excuse Me Miss)',
-       'album_uri': 'spotify:album:49gaz5rhWWgqCw61M9700v',
-       'duration_ms': 229040,
-       'album_name': 'Chris Brown'},
-      {'pos': 25,
-       'artist_name': 'Jonas Brothers',
-       'track_uri': 'spotify:track:1TfAhjzRBWzYZ8IdUV3igl',
-       'artist_uri': 'spotify:artist:7gOdHgIoIKoe4i9Tta6qdD',
-       'track_name': 'Year 3000',
-       'album_uri': 'spotify:album:20RAjvZ9LX2FDuDU8RDuIl',
-       'duration_ms': 201960,
-       'album_name': 'Jonas Brothers'},
-      {'pos': 26,
-       'artist_name': 'Lil Mama',
-       'track_uri': 'spotify:track:1Y4ZdPOOgCUhBcKZOrUFiS',
-       'artist_uri': 'spotify:artist:5qK5bOC6wLtuLhG5KvU17c',
-       'track_name': 'Lip Gloss',
-       'album_uri': 'spotify:album:3vgVsm9GY3i39fZ7b1sqV5',
-       'duration_ms': 219773,
-       'album_name': 'Lip Gloss'},
-      {'pos': 27,
-       'artist_name': 'Cascada',
-       'track_uri': 'spotify:track:6MjljecHzHelUDismyKkba',
-       'artist_uri': 'spotify:artist:0N0d3kjwdY2h7UVuTdJGfp',
-       'track_name': 'Everytime We Touch - Radio Edit',
-       'album_uri': 'spotify:album:5DvuKZTzEKjm0oUuhP237C',
-       'duration_ms': 199120,
-       'album_name': 'Everytime We Touch'},
-      {'pos': 28,
-       'artist_name': 'Jason Derulo',
-       'track_uri': 'spotify:track:67T6l4q3zVjC5nZZPXByU8',
-       'artist_uri': 'spotify:artist:07YZf4WDAMNwqr4jfgOZ8y',
-       'track_name': 'Whatcha Say',
-       'album_uri': 'spotify:album:0aVJmVAeEx78nAA1rAKYf7',
-       'duration_ms': 221253,
-       'album_name': 'Jason Derulo'},
-      {'pos': 29,
-       'artist_name': 'Ne-Yo',
-       'track_uri': 'spotify:track:34ceTg8ChN5HjrqiIYCn9Q',
-       'artist_uri': 'spotify:artist:21E3waRsmPlU7jZsS13rcj',
-       'track_name': 'Miss Independent',
-       'album_uri': 'spotify:album:6dTn9vJSxVTIGm4Cu5dH4x',
-       'duration_ms': 232000,
-       'album_name': 'Year Of The Gentleman'},
-      {'pos': 30,
-       'artist_name': 'Miley Cyrus',
-       'track_uri': 'spotify:track:5Q0Nhxo0l2bP3pNjpGJwV1',
-       'artist_uri': 'spotify:artist:5YGY8feqx7naU7z4HrwZM6',
-       'track_name': 'Party In The U.S.A.',
-       'album_uri': 'spotify:album:64aKkqxc3Ur2LYIKeS5osS',
-       'duration_ms': 202066,
-       'album_name': 'The Time Of Our Lives'},
-      {'pos': 31,
-       'artist_name': 'Boys Like Girls',
-       'track_uri': 'spotify:track:6GIrIt2M39wEGwjCQjGChX',
-       'artist_uri': 'spotify:artist:0vWCyXMrrvMlCcepuOJaGI',
-       'track_name': 'The Great Escape',
-       'album_uri': 'spotify:album:4WqgusSAgXkrjbXzqdBY68',
-       'duration_ms': 206520,
-       'album_name': 'Boys Like Girls'},
-      {'pos': 32,
-       'artist_name': 'Iyaz',
-       'track_uri': 'spotify:track:4E5P1XyAFtrjpiIxkydly4',
-       'artist_uri': 'spotify:artist:5tKXB9uuebKE34yowVaU3C',
-       'track_name': 'Replay',
-       'album_uri': 'spotify:album:44hyrGuZKAvITbmrlhryf8',
-       'duration_ms': 182306,
-       'album_name': 'Replay'},
-      {'pos': 33,
-       'artist_name': 'Chris Brown',
-       'track_uri': 'spotify:track:3H1LCvO3fVsK2HPguhbml0',
-       'artist_uri': 'spotify:artist:7bXgB6jMjp9ATFy66eO08Z',
-       'track_name': 'Forever',
-       'album_uri': 'spotify:album:1UtE4zAlSE2TlKmTFgrTg5',
-       'duration_ms': 277106,
-       'album_name': 'Exclusive - The Forever Edition'},
-      {'pos': 34,
-       'artist_name': 'Kesha',
-       'track_uri': 'spotify:track:3uoQULcUWfnt6nc6J7Vgai',
-       'artist_uri': 'spotify:artist:6LqNN22kT3074XbTVUrhzX',
-       'track_name': 'Your Love Is My Drug',
-       'album_uri': 'spotify:album:5peRwC6pQh8eaoIPtvmmOB',
-       'duration_ms': 187133,
-       'album_name': 'Animal'},
-      {'pos': 35,
-       'artist_name': 'Ne-Yo',
-       'track_uri': 'spotify:track:2nbClS09zsIAqNkshg6jnp',
-       'artist_uri': 'spotify:artist:21E3waRsmPlU7jZsS13rcj',
-       'track_name': 'Closer',
-       'album_uri': 'spotify:album:1nv3KEXZPmcwOXMoLTs1vn',
-       'duration_ms': 234360,
-       'album_name': 'Year Of The Gentleman'},
-      {'pos': 36,
-       'artist_name': 'Justin Bieber',
-       'track_uri': 'spotify:track:69ghzc538EQSVon2Gm3wrr',
-       'artist_uri': 'spotify:artist:1uNFoZAHBGtllmzznpCI3s',
-       'track_name': 'One Less Lonely Girl',
-       'album_uri': 'spotify:album:1rG5TDs3jYh6OU753I54CI',
-       'duration_ms': 229106,
-       'album_name': 'My World'},
-      {'pos': 37,
-       'artist_name': 'M.I.A.',
-       'track_uri': 'spotify:track:1kusepF3AacIEtUTYrw4GV',
-       'artist_uri': 'spotify:artist:0QJIPDAEDILuo8AIq3pMuU',
-       'track_name': 'Paper Planes',
-       'album_uri': 'spotify:album:1Lymt1abGCr3J06bbnmWca',
-       'duration_ms': 203760,
-       'album_name': 'Kala'},
-      {'pos': 38,
-       'artist_name': 'The Killers',
-       'track_uri': 'spotify:track:7oK9VyNzrYvRFo7nQEYkWN',
-       'artist_uri': 'spotify:artist:0C0XlULifJtAgn6ZNCW2eu',
-       'track_name': 'Mr. Brightside',
-       'album_uri': 'spotify:album:4undIeGmofnAYKhnDclN1w',
-       'duration_ms': 222586,
-       'album_name': 'Hot Fuss'},
-      {'pos': 39,
-       'artist_name': 'blink-182',
-       'track_uri': 'spotify:track:12qZHAeOyTf93YAWvGDTat',
-       'artist_uri': 'spotify:artist:6FBDaR13swtiWwGhX1WQsP',
-       'track_name': 'All The Small Things',
-       'album_uri': 'spotify:album:1fF8kYX49s5Ufv4XEY5sjW',
-       'duration_ms': 168000,
-       'album_name': 'Enema Of The State'},
-      {'pos': 40,
-       'artist_name': 'The Pussycat Dolls',
-       'track_uri': 'spotify:track:2jFlMILIQzs7lSFudG9lbo',
-       'artist_uri': 'spotify:artist:6wPhSqRtPu1UhRCDX5yaDJ',
-       'track_name': 'Beep',
-       'album_uri': 'spotify:album:0ylxpXE00fVxh6d60tevT8',
-       'duration_ms': 229360,
-       'album_name': 'PCD'},
-      {'pos': 41,
-       'artist_name': 'Justin Bieber',
-       'track_uri': 'spotify:track:4I2GqMe7L2ccMpUbnDzYLH',
-       'artist_uri': 'spotify:artist:1uNFoZAHBGtllmzznpCI3s',
-       'track_name': 'Somebody To Love',
-       'album_uri': 'spotify:album:6gdLfnf2vdNlMTyhJHaDLs',
-       'duration_ms': 220920,
-       'album_name': 'My Worlds'},
-      {'pos': 42,
-       'artist_name': 'The All-American Rejects',
-       'track_uri': 'spotify:track:5lDriBxJd22IhOH9zTcFrV',
-       'artist_uri': 'spotify:artist:3vAaWhdBR38Q02ohXqaNHT',
-       'track_name': 'Dirty Little Secret',
-       'album_uri': 'spotify:album:3PWEGZ6CYvXRnr0JCECsDe',
-       'duration_ms': 193653,
-       'album_name': 'Move Along'},
-      {'pos': 43,
-       'artist_name': 'Justin Bieber',
-       'track_uri': 'spotify:track:2eJ8ij1T3cNUKiGdcUvKhy',
-       'artist_uri': 'spotify:artist:1uNFoZAHBGtllmzznpCI3s',
-       'track_name': 'Baby',
-       'album_uri': 'spotify:album:6gdLfnf2vdNlMTyhJHaDLs',
-       'duration_ms': 213973,
-       'album_name': 'My Worlds'},
-      {'pos': 44,
-       'artist_name': 'Vanessa Carlton',
-       'track_uri': 'spotify:track:5y69gQtK33qxb8a24ACkCy',
-       'artist_uri': 'spotify:artist:5ILrArfIV0tMURcHJN8Q07',
-       'track_name': 'A Thousand Miles',
-       'album_uri': 'spotify:album:7D6BFTArx2ajtkKRVXIKO2',
-       'duration_ms': 237493,
-       'album_name': 'Be Not Nobody'},
-      {'pos': 45,
-       'artist_name': 'Cris Cab',
-       'track_uri': 'spotify:track:1X5WGCrUMuwRFuYU1eAo2I',
-       'artist_uri': 'spotify:artist:7vWBZm3sQ8yQvfV4nXxHXK',
-       'track_name': 'Livin on Sunday',
-       'album_uri': 'spotify:album:2kNznk4KDkYXifzOAUDoXN',
-       'duration_ms': 201230,
-       'album_name': 'Red Road'},
-      {'pos': 46,
-       'artist_name': 'Miley Cyrus',
-       'track_uri': 'spotify:track:3utIAb67sOu0QHxBE88P1M',
-       'artist_uri': 'spotify:artist:5YGY8feqx7naU7z4HrwZM6',
-       'track_name': 'See You Again',
-       'album_uri': 'spotify:album:6SkirMQoL4QhnXOM5MH5El',
-       'duration_ms': 190453,
-       'album_name': 'See You Again'},
-      {'pos': 47,
-       'artist_name': 'Jesse McCartney',
-       'track_uri': 'spotify:track:3jkdQNkDTxxXtjSO4l0o1H',
-       'artist_uri': 'spotify:artist:2Hjj68yyUPiC0HKEOigcEp',
-       'track_name': 'How Do You Sleep? - Featuring Ludacris',
-       'album_uri': 'spotify:album:2tDCfKFy2YW9N0IwNSRdOJ',
-       'duration_ms': 208333,
-       'album_name': 'Departure - Recharged'},
-      {'pos': 48,
-       'artist_name': 'Demi Lovato',
-       'track_uri': 'spotify:track:5c1sfI6wIQEsSUw0xrkFdl',
-       'artist_uri': 'spotify:artist:6S2OmqARrzebs0tKUEyXyp',
-       'track_name': 'This Is Me',
-       'album_uri': 'spotify:album:6vykWEBzBfEKYJxEFR1AQl',
-       'duration_ms': 189186,
-       'album_name': 'Camp Rock Original Soundtrack'},
-      {'pos': 49,
-       'artist_name': 'Avril Lavigne',
-       'track_uri': 'spotify:track:6sqNctd7MlJoKDOxPVCAvU',
-       'artist_uri': 'spotify:artist:0p4nmQO2msCgU4IF37Wi3j',
-       'track_name': 'My Happy Ending',
-       'album_uri': 'spotify:album:7851Vsjv3apS52sXUik6iF',
-       'duration_ms': 242413,
-       'album_name': 'Under My Skin'},
-      {'pos': 50,
-       'artist_name': 'We The Kings',
-       'track_uri': 'spotify:track:1b7vg5T9YKR3NNqXfBYRF7',
-       'artist_uri': 'spotify:artist:3ao3jf5d70Tf4fPh2bnXVl',
-       'track_name': 'Check Yes Juliet',
-       'album_uri': 'spotify:album:2F1hfUOuMnOxtSfrktL8VX',
-       'duration_ms': 220133,
-       'album_name': 'We The Kings'},
-      {'pos': 51,
-       'artist_name': 'Boys Like Girls',
-       'track_uri': 'spotify:track:6GIrIt2M39wEGwjCQjGChX',
-       'artist_uri': 'spotify:artist:0vWCyXMrrvMlCcepuOJaGI',
-       'track_name': 'The Great Escape',
-       'album_uri': 'spotify:album:4WqgusSAgXkrjbXzqdBY68',
-       'duration_ms': 206520,
-       'album_name': 'Boys Like Girls'}],
-     'num_edits': 6,
-     'duration_ms': 11532414,
-     'num_artists': 37}
+    <ipython-input-28-96f9cb77a199> in <module>()
+          3     playlist_data = json.load(fd)
+          4 
+    ----> 5 playlist_data['playlists'][0].head()
+    
 
+    AttributeError: 'dict' object has no attribute 'head'
 
 
 - Notes:
@@ -818,7 +400,7 @@ sp.artist(ARTIST_URI)
 
 
     {'external_urls': {'spotify': 'https://open.spotify.com/artist/2wIVse2owClT7go1WT98tk'},
-     'followers': {'href': None, 'total': 909586},
+     'followers': {'href': None, 'total': 909659},
      'genres': ['dance pop',
       'hip hop',
       'hip pop',
@@ -2674,7 +2256,7 @@ sp.artist_related_artists(ARTIST_URI)
 
 
     {'artists': [{'external_urls': {'spotify': 'https://open.spotify.com/artist/5tth2a3v0sWwV1C7bApBdX'},
-       'followers': {'href': None, 'total': 516154},
+       'followers': {'href': None, 'total': 516225},
        'genres': ['dance pop',
         'east coast hip hop',
         'escape room',
@@ -2706,7 +2288,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:5tth2a3v0sWwV1C7bApBdX'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/0urTpYCsixqZwgNTkPJOJ4'},
-       'followers': {'href': None, 'total': 1448189},
+       'followers': {'href': None, 'total': 1448335},
        'genres': ['dance pop',
         'hip hop',
         'hip pop',
@@ -2734,7 +2316,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:0urTpYCsixqZwgNTkPJOJ4'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/4d3yvTptO48nOYTPBcPFZC'},
-       'followers': {'href': None, 'total': 440646},
+       'followers': {'href': None, 'total': 440703},
        'genres': ['dance pop',
         'hip hop',
         'hip pop',
@@ -2759,7 +2341,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:4d3yvTptO48nOYTPBcPFZC'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/1wvlC6NwleHt1iRD6d5X2C'},
-       'followers': {'href': None, 'total': 210954},
+       'followers': {'href': None, 'total': 210980},
        'genres': ['east coast hip hop',
         'hardcore hip hop',
         'hip hop',
@@ -2786,7 +2368,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:1wvlC6NwleHt1iRD6d5X2C'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/6lHL3ubAMgSasKjNqKb8HF'},
-       'followers': {'href': None, 'total': 509772},
+       'followers': {'href': None, 'total': 509830},
        'genres': ['dance pop',
         'deep pop r&b',
         'hip pop',
@@ -2810,7 +2392,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:6lHL3ubAMgSasKjNqKb8HF'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/05oH07COxkXKIMt6mIPRee'},
-       'followers': {'href': None, 'total': 1090512},
+       'followers': {'href': None, 'total': 1090636},
        'genres': ['dance pop',
         'deep pop r&b',
         'hip hop',
@@ -2838,7 +2420,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:05oH07COxkXKIMt6mIPRee'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/0IF46mUS8NXjgHabxk2MCM'},
-       'followers': {'href': None, 'total': 243477},
+       'followers': {'href': None, 'total': 243493},
        'genres': ['dance pop',
         'electropop',
         'hip pop',
@@ -2863,7 +2445,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:0IF46mUS8NXjgHabxk2MCM'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/08rMCq2ek1YjdDBsCPVH2s'},
-       'followers': {'href': None, 'total': 360947},
+       'followers': {'href': None, 'total': 360982},
        'genres': ['dance pop',
         'deep pop r&b',
         'hip hop',
@@ -2888,7 +2470,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:08rMCq2ek1YjdDBsCPVH2s'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/0TImkz4nPqjegtVSMZnMRq'},
-       'followers': {'href': None, 'total': 1353869},
+       'followers': {'href': None, 'total': 1354027},
        'genres': ['atl hip hop',
         'dance pop',
         'girl group',
@@ -2914,7 +2496,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:0TImkz4nPqjegtVSMZnMRq'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/4PrinKSrmILmo0kERG0Ogn'},
-       'followers': {'href': None, 'total': 354384},
+       'followers': {'href': None, 'total': 354430},
        'genres': ['deep pop r&b',
         'dirty south rap',
         'hip pop',
@@ -2944,7 +2526,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:4PrinKSrmILmo0kERG0Ogn'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/2NdeV5rLm47xAvogXrYhJX'},
-       'followers': {'href': None, 'total': 3481027},
+       'followers': {'href': None, 'total': 3481260},
        'genres': ['dance pop',
         'hip hop',
         'hip pop',
@@ -2970,7 +2552,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:2NdeV5rLm47xAvogXrYhJX'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/1urjDGTd4iBze91Z1W1gu7'},
-       'followers': {'href': None, 'total': 199015},
+       'followers': {'href': None, 'total': 199033},
        'genres': ['hip hop',
         'hip pop',
         'neo soul',
@@ -2997,7 +2579,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:1urjDGTd4iBze91Z1W1gu7'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/2I1bnmb9VQEQGKHxvr0gSf'},
-       'followers': {'href': None, 'total': 153994},
+       'followers': {'href': None, 'total': 154016},
        'genres': ['hip hop',
         'hip pop',
         'new jack swing',
@@ -3022,7 +2604,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:2I1bnmb9VQEQGKHxvr0gSf'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/4qwGe91Bz9K2T8jXTZ815W'},
-       'followers': {'href': None, 'total': 1281120},
+       'followers': {'href': None, 'total': 1281263},
        'genres': ['dance pop',
         'hip pop',
         'motown',
@@ -3046,7 +2628,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:4qwGe91Bz9K2T8jXTZ815W'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/6nzxy2wXs6tLgzEtqOkEi2'},
-       'followers': {'href': None, 'total': 978292},
+       'followers': {'href': None, 'total': 978397},
        'genres': ['dance pop',
         'deep pop r&b',
         'hip pop',
@@ -3077,7 +2659,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:6nzxy2wXs6tLgzEtqOkEi2'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/6zDBeei6hHRiZdAJ6zoTCo'},
-       'followers': {'href': None, 'total': 240918},
+       'followers': {'href': None, 'total': 240940},
        'genres': ['hip pop', 'indie r&b', 'neo soul', 'r&b', 'urban contemporary'],
        'href': 'https://api.spotify.com/v1/artists/6zDBeei6hHRiZdAJ6zoTCo',
        'id': '6zDBeei6hHRiZdAJ6zoTCo',
@@ -3098,7 +2680,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:6zDBeei6hHRiZdAJ6zoTCo'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/1YfEcTuGvBQ8xSD1f53UnK'},
-       'followers': {'href': None, 'total': 1002041},
+       'followers': {'href': None, 'total': 1002131},
        'genres': ['dirty south rap',
         'east coast hip hop',
         'hardcore hip hop',
@@ -3125,7 +2707,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:1YfEcTuGvBQ8xSD1f53UnK'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/7wqtxqI3eo7Gn1P7SpP6cQ'},
-       'followers': {'href': None, 'total': 298093},
+       'followers': {'href': None, 'total': 298129},
        'genres': ['dance pop',
         'girl group',
         'hip hop',
@@ -3153,7 +2735,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:7wqtxqI3eo7Gn1P7SpP6cQ'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/7r8RF1tN2A4CiGEplkp1oP'},
-       'followers': {'href': None, 'total': 1120256},
+       'followers': {'href': None, 'total': 1120357},
        'genres': ['dance pop',
         'hip hop',
         'hip pop',
@@ -3180,7 +2762,7 @@ sp.artist_related_artists(ARTIST_URI)
        'type': 'artist',
        'uri': 'spotify:artist:7r8RF1tN2A4CiGEplkp1oP'},
       {'external_urls': {'spotify': 'https://open.spotify.com/artist/5fikk4h5qbEebqK2Fc6e48'},
-       'followers': {'href': None, 'total': 432630},
+       'followers': {'href': None, 'total': 432695},
        'genres': ['dance pop',
         'girl group',
         'hip pop',
@@ -5986,7 +5568,582 @@ BeautifulSoup(requests.get(LyricsWikiURL).text,'html.parser')
 
 ## 2. Data Resampling
 
-### (1) 
+- As mentioned earlier, the Million Playlist Dataset is too large to handle, we have decided to resize/resample the data.
 
-This is converted encoded as either 0 or 1 for each of the 126 Spotify seed genres. Seed genres can be obtained by Spotipy using spotipy.Spotify().recommendation_genre_seeds().
-    - More information is available at: https://developer.spotify.com/documentation/web-api/reference/artists/get-artist/
+- We have decided to sample 1000 playlists among the 1 million playlists, and the selection criteria were as follows:
+    - The number of followers should be equal or greater than 20.
+        - If the number of followers is too few, e.g. 1 only the person who created the playlist, the taste of the playlist might be highly biased and/or inconsistent. To ensure the consistency and generalizability, we set a lower bound to the number of followers.
+    - The number of tracks should be greater than 55.
+        - If there are too few number of tracks in a playlist, it would be very hard to split the train and test sets, preventing meaningful predictions. We set the minimum size of both training and test sets as 25, with margin 5, so the minimum number of tracks was determined as 55.
+    - Among the playlists that meets the criteria above, randomly sample 1000 playlists.
+        - We may select 1000 playlists in the order of the number of followers, but in this way, the samples may also be biased by having too popular musics only.
+
+- The `playlist_stat.npy` below contains pre-prepared data (separate ipynb and pdf are attached) for the number of followers and the number of tracks in the Million Playlist:
+
+
+
+```python
+playlist_stat = np.load('data/playlist_stat.npy')
+```
+
+
+- The distribution of the number of tracks in a playlist for the Million Playlist Dataset is like below:
+
+
+
+```python
+plt.figure(figsize=[8,6])
+plt.hist(playlist_stat[:,4],bins=50)
+plt.title('distribution of the number of tracks in a playlist')
+plt.xlabel('counts of playlist')
+plt.ylabel('number of tracks')
+plt.show()
+
+from statistics import mode
+mode(playlist_stat[:,4])
+```
+
+
+
+
+
+
+
+    20.0
+
+
+
+- Thus, the number of tracks in a playlist shows a right-skewed distribution and the most fequent number is 20.
+
+- Similarly, the distribution of the number of followers of a playlists for the Million Playlist Dataset is like below:
+
+
+
+```python
+plt.figure(figsize=[8,6])
+plt.hist(playlist_stat[:,3], bins=50, log=True)
+plt.title('distribution of the number of followers in a playlist (log-scale)')
+plt.xlabel('counts of playlist')
+plt.ylabel('number of followers')
+plt.show()
+```
+
+
+
+
+- Note that, this is in log scale. As shown, a majority of the playlists has 1 follower (the creater of the playlist themselves), and only few playlists has 10000+ followers.
+
+- Based on the criteria above, we've sampled playlists that have 55+ tracks, and eligible playlists are 447703 playlists out of 1 million.
+
+
+
+```python
+playlist_stat_55 = playlist_stat[playlist_stat[:,4]>55,:]
+playlist_stat_55.shape[0]
+```
+
+
+
+
+
+    447703
+
+
+
+- Among the 447703 playlists selected, depending on the number of followers that we select as the lower bound, the final number of eligible playlists is like below:
+
+
+
+```python
+print('[followers]\t[playlists]')
+print(40, '\t\t', sum(playlist_stat_55[:,3]>=40))
+print(30, '\t\t', sum(playlist_stat_55[:,3]>=30))
+print(20, '\t\t', sum(playlist_stat_55[:,3]>=20))
+print(10, '\t\t', sum(playlist_stat_55[:,3]>=10))
+print(5, '\t\t', sum(playlist_stat_55[:,3]>=5))
+```
+
+
+    [followers]	[playlists]
+    40 		 919
+    30 		 1211
+    20 		 1852
+    10 		 5070
+    5 		 20726
+    
+
+- This indicates that, if we select the lower bound of the number of followers as 20 based on the criteria above, 1852 playlists out of 1 million will be eligible. We believe 1852 to 1000 is a reasonable down-sampling rate, so we sampled 1000 playlists among these 1852 playlists by using `np.random.seed(0)` and `np.random.choice` (separate ipynb and pdf are attached).
+
+## 3. Scaping and Constructing Data Structure
+
+### (1) Initial Data Structure from Million Playlist Dataset
+
+- After sampling 1000 playlists out of eligible 1852 playlists, we constructed initial data structure as a Pandas DataFrame. The initial data structure contains all the information provided by the Million Playlist Dataset.
+    - For each playlist, available data are:
+        - `name` (string): The name of the playlist.
+        - `collaborative` (Boolean): `true` if the owner allows other users to modify the playlist.
+        - `pid` (int): Position ID number of the playlist in the dataset (0 - 999999).
+        - `modified_at` (timestamp): The timestamp when the playlist was list modified.
+        - `num_tracks` (int): The number of tracks in the playlist.
+        - `num_albums` (int): The number of unique albums in the playlist.
+        - `num_followers` (int): The number of followers of the playlist.
+        - `tracks` (dictionary): The list of tracks in the playlist (see below).
+        - `num_edits` (int): The number of edits that has been made so far.
+        - `duration_ms` (int): The total duration of the playlist in milliseconds.
+        - `num_artists` (int): The number of unique artists in the playlist.
+    - For each track in a playlist, available data are:
+        - `pos` (int): Position ID number of the track in the playlist.
+        - `artist_name` (string): The name of the artist of the track.
+        - `track_uri` (uri): The URI for the track.
+        - `artist_uri` (uri): The URI for the artist of the track.
+        - `track_name` (string): The name of the track.
+        - `album_uri` (uri): The URI for the album of the track.
+        - `duration_ms` (int): The duration of the track in milliseconds.
+        - `album_name` (string): The name of the album of the track.
+- For each playlist, we select the first 55 tracks, so that all playlists have the same contribution to the model. This will makes the number of tracks 550000.
+
+- The `playlists_df_sort.pkl` below contains pre-prepared data (separate ipynb and pdf are attached) for initial data structure contains 550000 tracks from the 1000 playlists.
+
+
+
+```python
+playlists_df_sort = pd.read_pickle('data/playlists_df_sort.pkl')
+display(playlists_df_sort.head())
+display(playlists_df_sort.describe())
+display(playlists_df_sort.shape)
+```
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>album_name</th>
+      <th>album_uri</th>
+      <th>artist_name</th>
+      <th>artist_uri</th>
+      <th>collaborative</th>
+      <th>description</th>
+      <th>duration_ms</th>
+      <th>modified_at</th>
+      <th>name</th>
+      <th>num_albums</th>
+      <th>num_artists</th>
+      <th>num_edits</th>
+      <th>num_followers</th>
+      <th>num_tracks</th>
+      <th>pid</th>
+      <th>playlist_duration_ms</th>
+      <th>pos</th>
+      <th>track_name</th>
+      <th>track_uri</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>127 Hours</td>
+      <td>spotify:album:70wOJPVD0SKMn0DtddtZP3</td>
+      <td>Free Blood</td>
+      <td>spotify:artist:58cwi0vXDQEihBLREQTBGG</td>
+      <td>false</td>
+      <td></td>
+      <td>351640</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>0</td>
+      <td>Never Hear Surf Music Again</td>
+      <td>spotify:track:0PxPcrfAXNu0MpKRwdlbuc</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Waves</td>
+      <td>spotify:album:2R6wefBXnMzCkRoqD7FdNk</td>
+      <td>Joey Bada$$</td>
+      <td>spotify:artist:2P5sC9cVZDToPxyomzF1UH</td>
+      <td>false</td>
+      <td></td>
+      <td>213333</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>1</td>
+      <td>Waves</td>
+      <td>spotify:track:1fb6b2Mas9q2mWxJazzeRI</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Every Kingdom</td>
+      <td>spotify:album:2MxcbOGFi99D9JACvj74AH</td>
+      <td>Ben Howard</td>
+      <td>spotify:artist:5schNIzWdI9gJ1QRK8SBnc</td>
+      <td>false</td>
+      <td></td>
+      <td>309346</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>2</td>
+      <td>The Wolves</td>
+      <td>spotify:track:3gqP2hxwgi6mb8FhtEe4zU</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Wasting Light</td>
+      <td>spotify:album:5lnQLEUiVDkLbFJHXHQu9m</td>
+      <td>Foo Fighters</td>
+      <td>spotify:artist:7jy3rLJdDQY21OgRLCZ9sD</td>
+      <td>false</td>
+      <td></td>
+      <td>286466</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>3</td>
+      <td>Bridge Burning</td>
+      <td>spotify:track:0bHD1nLe7Nhw55ZGJ92332</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sweet Disarray</td>
+      <td>spotify:album:2qg3JERQKBjZXvMBtvKR0y</td>
+      <td>Dan Croll</td>
+      <td>spotify:artist:5Rr15NSbi1Xjno1AEP9u21</td>
+      <td>false</td>
+      <td></td>
+      <td>196848</td>
+      <td>1492992000</td>
+      <td>BIKING</td>
+      <td>97</td>
+      <td>93</td>
+      <td>67</td>
+      <td>31</td>
+      <td>100</td>
+      <td>391407</td>
+      <td>24415031</td>
+      <td>4</td>
+      <td>From Nowhere</td>
+      <td>spotify:track:5c9YHjSjEZxaCxsF1Gy5Jt</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>duration_ms</th>
+      <th>modified_at</th>
+      <th>num_albums</th>
+      <th>num_artists</th>
+      <th>num_edits</th>
+      <th>num_followers</th>
+      <th>num_tracks</th>
+      <th>pid</th>
+      <th>playlist_duration_ms</th>
+      <th>pos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5.500000e+04</td>
+      <td>5.500000e+04</td>
+      <td>55000.000000</td>
+      <td>55000.00000</td>
+      <td>55000.000000</td>
+      <td>55000.000000</td>
+      <td>55000.000000</td>
+      <td>55000.000000</td>
+      <td>5.500000e+04</td>
+      <td>55000.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2.350665e+05</td>
+      <td>1.481653e+09</td>
+      <td>88.700000</td>
+      <td>64.90000</td>
+      <td>38.719000</td>
+      <td>471.814000</td>
+      <td>126.793000</td>
+      <td>497957.939000</td>
+      <td>2.964576e+07</td>
+      <td>27.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>7.615811e+04</td>
+      <td>3.638871e+07</td>
+      <td>46.491755</td>
+      <td>37.78886</td>
+      <td>32.297601</td>
+      <td>2867.397217</td>
+      <td>53.436149</td>
+      <td>287955.184373</td>
+      <td>1.318153e+07</td>
+      <td>15.874652</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2.060000e+02</td>
+      <td>1.298765e+09</td>
+      <td>4.000000</td>
+      <td>3.00000</td>
+      <td>2.000000</td>
+      <td>20.000000</td>
+      <td>56.000000</td>
+      <td>1923.000000</td>
+      <td>9.243679e+06</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.968930e+05</td>
+      <td>1.468260e+09</td>
+      <td>55.000000</td>
+      <td>40.00000</td>
+      <td>12.000000</td>
+      <td>25.000000</td>
+      <td>81.000000</td>
+      <td>256333.750000</td>
+      <td>1.872908e+07</td>
+      <td>13.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.251460e+05</td>
+      <td>1.498046e+09</td>
+      <td>81.000000</td>
+      <td>60.00000</td>
+      <td>32.000000</td>
+      <td>39.000000</td>
+      <td>115.500000</td>
+      <td>495125.000000</td>
+      <td>2.681876e+07</td>
+      <td>27.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2.611548e+05</td>
+      <td>1.507615e+09</td>
+      <td>117.000000</td>
+      <td>86.25000</td>
+      <td>54.000000</td>
+      <td>104.000000</td>
+      <td>166.000000</td>
+      <td>742869.750000</td>
+      <td>3.841217e+07</td>
+      <td>41.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4.504400e+06</td>
+      <td>1.509494e+09</td>
+      <td>234.000000</td>
+      <td>194.00000</td>
+      <td>179.000000</td>
+      <td>53519.000000</td>
+      <td>250.000000</td>
+      <td>997547.000000</td>
+      <td>9.654618e+07</td>
+      <td>54.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+    (55000, 19)
+
+
+- As shown, the initial data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 19, but only 10 of them are numeric, indicating there are not enough numeric data to build model and make prediction.
+
+### (2) Data Scraping from Spotify API
+
+- As mentioned above, by using `album_uri`, `artist_uri`, and `track_uri` in the intial data structure, we can scrape more data using Spotify API. We have created custom python functions to scrape information using different Spotify API function endpoints.
+
+- `AddAudioFeatures`: adds `danceability`, `energy`, `key`, `loudness`, `mode`, `speechiness`, `acousticness`, `instrumentalness`, `liveness`, `valence`, `tempo`, and `time_signature` of the track by using `spotipy.Spotify().audio_features(track_uri)`:
+
+
+
+```python
+def AddAudioFeatures(df, ind, sp):
+    try:
+        audio_feature = sp.audio_features(df.loc[ind]['track_uri'])[0]
+    except:
+        print('No ID at ' + str(ind))
+    else:
+        feature_list = ['danceability','energy','key','loudness','mode','speechiness','acousticness',
+                        'instrumentalness','liveness','valence','tempo','time_signature']
+
+        for feature in feature_list:
+            df.at[ind, feature] = audio_feature[feature]
+```
+
+
+- `AddTrackPopularity`: adds `popularity` of the track by using `spotipy.Spotify().track(track_uri)`:
+
+
+
+```python
+def AddTrackPopularity(df, ind, sp):
+    try:
+        track_info = sp.track(df.loc[ind]['track_uri'])
+    except:
+        print('No ID at ' + str(ind))
+    else:
+        df.at[ind, 'popularity'] = track_info['popularity']
+```
+
+
+- `AddArtistGenres`: adds genres of the artist with one-hot encoding using `spotipy.Spotify().artist(artist_uri)`. Note that this is genres of the artist, not of the track, as the Spotify API doesn't provide genre for each track. Also, note that as a list of genres, we used `spotipy.Spotify().recommendation_genre_seeds()['genres']`, which contains names of 126 basic genres.
+
+
+
+```python
+def AddArtistGenres(df, ind, sp):
+    try:
+        artist_info = sp.artist(df.loc[ind]['artist_uri'])
+    except:
+        print('No ID at ' + str(ind))
+    else:
+        genre_list = sp.recommendation_genre_seeds()['genres']
+
+        for gen in genre_list:
+            if gen in artist_info['genres']:
+                df.at[ind, gen] = 1
+            else:
+                df.at[ind, gen] = 0
+```
+
+
+- `AddAlbumYear`: adds the year when the album came out using `spotipy.Spotify().album(album_uri)`. Note that Spotify API provides the `release_date` in `YYYY-MM-DD` form, so the first part of the string is converted into an integer.
+
+
+
+```python
+def AddAlbumYear(df, ind, sp):
+    try:
+        album_info = sp.album(df.loc[ind]['album_uri'])
+    except:
+        print('No ID at ' + str(ind))
+    else:
+        df.at[ind, 'year'] = int(album_info['release_date'].split('-')[0])
+```
+
+
+- `AddTopTracks`: adds the number of top tracks of the artist as well as URIs of all of the top tracks using `spotipy.Spotify().artist_top_tracks(artist_uri)`. If the number of top tracks is less than 10, the remainings will be filled with blank.
+
+
+
+```python
+def AddTopTracks(df, ind, sp):    
+    try:
+        top_track_info = sp.artist_top_tracks(df.loc[ind]['artist_uri'])['tracks']
+    except:
+        print('\n No ID at ' + str(ind) + '\n')
+        print(df.loc[ind]['artist_uri'])
+    else:
+        n = len(top_track_info)
+        df.at[ind, 'top_track_n'] = n
+        
+        for i in range(10):
+            if i in range(n):
+                df.at[ind, 'top_track_'+str(i)] = top_track_info[i]['uri']
+            else:
+                df.at[ind, 'top_track_'+str(i)] = ''
+```
+
+
+- AddRelatedArtists: adds the number of related artists of the artist as well as URIs of all of the related artists using `spotipy.Spotify().artist_related_artists(artist_uri)`. If the number of related artists is less than 20, the remainings will be filled with blank.
+
+
+
+```python
+def AddRelatedArtists(df, ind, sp):
+    try:
+        related_artist_info = sp.artist_related_artists(df.loc[ind]['artist_uri'])['artists']
+    except:
+        print('\n No ID at ' + str(ind) + '\n')
+        print(df.loc[ind]['artist_uri'])
+    else:
+        n = len(related_artist_info)
+        df.at[ind, 'related_artist_n'] = n
+        
+        for i in range(20):
+            if i in range(n):
+                df.at[ind, 'related_artist_'+str(i)] = related_artist_info[i]['uri']
+            else:
+                df.at[ind, 'related_artist_'+str(i)] = ''
+```
+
+
+### (3) Data Scraping from Genius API and Lyrics Wiki
+
+- As mentioned above, by us
+
+
+
+```python
+
+```
+

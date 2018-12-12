@@ -41,10 +41,6 @@
 ![svg]({{ output.metadata.filenames['image/svg+xml'] | path2url }})
 {% endblock data_svg %}
 
-{% block data_png %}
-![png]({{ output.metadata.filenames['image/png'] | path2url }})
-{% endblock data_png %}
-
 {% block data_jpg %}
 ![jpeg]({{ output.metadata.filenames['image/jpeg'] | path2url }})
 {% endblock data_jpg %}
