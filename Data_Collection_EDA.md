@@ -100,10 +100,6 @@ sp.track(TRACK_URI)
 
 
 
-```python
-TRACK_URI = playlist_data['playlists'][0]['tracks'][0]['track_uri']
-sp.track(TRACK_URI)
-```
 
 
 - `spotipy.Spotify().artist(artist_uri)`: Get Spotify catalog information for a single artist identified by their unique Spotify ID. (https://developer.spotify.com/documentation/web-api/reference/artists/get-artist/)
@@ -167,10 +163,6 @@ sp.album(ALBUM_URI)
 
 
 
-```python
-ALBUM_URI = playlist_data['playlists'][0]['tracks'][0]['album_uri']
-sp.album(ALBUM_URI)
-```
 
 
 - `spotipy.Spotify().audio_features(track_uri)`: Get audio feature information for a single track identified by its unique Spotify ID. (https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/)
@@ -234,10 +226,6 @@ sp.artist_related_artists(ARTIST_URI)
 
 
 
-```python
-ARTIST_URI = playlist_data['playlists'][0]['tracks'][0]['artist_uri']
-sp.artist_related_artists(ARTIST_URI)
-```
 
 
 - `spotipy.Spotify().artist_top_tracks(artist_uri)`: Get Spotify catalog information about an artist’s top tracks by country.
@@ -255,10 +243,6 @@ sp.artist_top_tracks(ARTIST_URI)
 
 
 
-```python
-ARTIST_URI = playlist_data['playlists'][0]['tracks'][0]['artist_uri']
-sp.artist_top_tracks(ARTIST_URI)
-```
 
 
 - Notes:
@@ -283,10 +267,6 @@ BeautifulSoup(requests.get(GeniusURL).text,'html.parser')
 
 
 
-```python
-GeniusURL = "https://genius.com/Missy-elliott-lose-control-lyrics"
-BeautifulSoup(requests.get(GeniusURL).text,'html.parser')
-```
 
 
 - Using Genius API, this information is more easily accessible.
@@ -322,10 +302,6 @@ BeautifulSoup(requests.get(LyricsWikiURL).text,'html.parser')
 
 
 
-```python
-LyricsWikiURL = "http://lyrics.wikia.com/wiki/Missy_Elliott:Lose_Control"
-BeautifulSoup(requests.get(LyricsWikiURL).text,'html.parser')
-```
 
 
 ## 2. Data Resampling
