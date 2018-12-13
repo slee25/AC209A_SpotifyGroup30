@@ -1,5 +1,5 @@
 theme: jekyll-theme-primer
-title: Project description
+title: Project Description
 description: Copied _config.yml given in Lab 11
 baseurl:
 markdown: kramdown
