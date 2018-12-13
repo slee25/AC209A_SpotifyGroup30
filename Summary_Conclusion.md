@@ -1,5 +1,5 @@
 ---
-title: Results and Conclusion
+title: Summary and Conclusion
 notebook: 
 nav_include: 6
 ---
@@ -11,9 +11,15 @@ nav_include: 6
 {: toc}
 
 
-## Conclusion
+## Summary and Conclusion
 
-here goes Results
+- The goal of the project is to perform the task of automatic playlist continuation. We refer to the database from the Spotify RecSys Challenge. Using techniques we learned in the class to scrape information from websites, use Spotify API to gather more information about the tracks, and clean up the data. We also investigate Natural Language Processing to analyze lyrics and expand our feature space. 
+
+- According to past works in the field and the inspiration from the course, we establish our model based on the autoencoder. The autoencoder successfully from the features extracts the information related to the playlist continuation. The performance of our model outperforms the basic model that directly uses the raw feature space. 
+
+- There are more works could be done to improve the results. We can extract more features from the known information that may be useful to strengthen the connection between tracks in the same playlist. There are also many hyper-parameters that can be tuned to improve our model, that we did not fully explore due to the limitation of time and effort. In addition, there exist other models that can perform the recommendation tasks that worth comparison.
+
+- In conclusion, our model achieves the goal to automatically continue the playlist, while there are more to be explored.  
 
 ## Discussion and Future Work
 
