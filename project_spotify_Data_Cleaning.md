@@ -1,13 +1,8 @@
-
-
-
-
 ---
 title: Data Cleaning
 notebook: notebooks/project_spotify_Data_Cleaning.ipynb
 nav_include: 3
 ---
-
 
 ## Contents
 {:.no_toc}
