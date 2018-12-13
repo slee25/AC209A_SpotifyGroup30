@@ -5,15 +5,14 @@ nav_include: 1
 ---
 
 
+- All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
+
+
 ## Contents
 {:.no_toc}
 *  
 {: toc}
 
-
-
-
-- All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
 
 ## 1. Research on Available Databases
 
