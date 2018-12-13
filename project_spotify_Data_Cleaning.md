@@ -4,11 +4,14 @@ notebook: notebooks/project_spotify_Data_Cleaning.ipynb
 nav_include: 3
 ---
 
+
+- All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
+
+
 ## Contents
 {:.no_toc}
 *  
 {: toc}
-
 
 
 ```python
@@ -12495,9 +12498,4 @@ np.sum(playlists_df_clean.isna())[np.sum(playlists_df_clean.isna()).values != 0]
 playlists_df_clean.to_pickle('playlists_df_clean.pkl')
 ```
 
-
-
-```python
-
-```
 
