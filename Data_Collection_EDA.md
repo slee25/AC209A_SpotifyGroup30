@@ -14,9 +14,9 @@ nav_include: 1
 {: toc}
 
 
-## 1. Research on Available Databases
+## 1) Research on Available Databases
 
-### (1) Million Playlist Dataset
+### [1] Million Playlist Dataset
 
 - Million Playlist Dataset is a very large playlist dataset provided by Spotify, particularly prepared for RecSys Challenge 2018 (https://recsys-challenge.spotify.com/). It consists of 1000 files in .json format, and each file contains 1000 user-created playlists, which makes 1 million playlists in 5.4 GB. The dataset was generated in December, 2017.
 
@@ -64,7 +64,7 @@ playlist_data['playlists'][0]
     - As the entire dataset is too large, data resizing (resampling) is required.
     - Although not many types of data are available in the dataset, but it does provide URIs for track, artist, and album for each track, which can be used in Spotify API to query more data (see below).
 
-### (2) Spotify Web API
+### [2] Spotify Web API
 
 - Spotify Web API (https://developer.spotify.com/documentation/web-api/) is a developer's tool provided by Spotify, particularly for developing web applications related to Spotify. Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue. Web API also provides access to user related data, like playlists and music that the user saves in the Your Music library. Such access is enabled through selective authorization, by the user. The API provides a set of endpoints, each with its own unique path. To access private data through the Web API, such as user profiles and playlists, an application must get the user's permission to access the data. Authorization is via the Spotify Accounts service.
 
@@ -286,7 +286,7 @@ sp.artist_top_tracks(ARTIST_URI)
 - Notes:
   - There may be high multicollinearity in these data, as these are a mix of primary and secondary information. For example, Spotify Web API explains that the danceability is based on other primary data including tempo, while the energy is based on some other primary data including loudness. Therefore, it would be important to find a method that are insensitive to the multicollinearity among columns.
 
-### (3) Genius API
+### [3] Genius API
 
 - Genius (https://genius.com/) is an American digital media library, particularly specialized for song lyrics and musical knowledge. Genius provides public Genius API where we can access lyrics data for songs.
 
@@ -322,7 +322,7 @@ BeautifulSoup(requests.get(GeniusAPIURL, data={'q': 'Lose Control Missy Elliott'
 
 
 
-### (4) Lyrics Wiki
+### [4] Lyrics Wiki
 
 - Lyrics Wiki (http://lyrics.wikia.com/wiki/LyricWiki) is a large database for lyrics. Lyrics for a certain song can be scraped at http://lyrics.wikia.com/wiki/[artist_name]:[track_name].
 
@@ -345,7 +345,7 @@ BeautifulSoup(requests.get(LyricsWikiURL).text,'html.parser')
 
 
 
-## 2. Data Resampling
+## 2) Data Resampling
 
 - As mentioned earlier, the Million Playlist Dataset is too large to handle, we have decided to resize/resample the data.
 
@@ -468,9 +468,9 @@ print(5, '\t\t', sum(playlist_stat_55[:,3]>=5))
 
 - This indicates that, if we select the lower bound of the number of followers as 20 based on the criteria above, 1852 playlists out of 1 million will be eligible. We believe 1852 to 1000 is a reasonable down-sampling rate, so we sampled 1000 playlists among these 1852 playlists by using `np.random.seed(0)` and `np.random.choice` (separate ipynb and pdf are attached: `Data_Collection_EDA_Section2.ipynb`).
 
-## 3. Scaping and Constructing Data Structure
+## 3) Scaping and Constructing Data Structure
 
-### (1) Initial Data Structure from Million Playlist Dataset
+### [1] Initial Data Structure from Million Playlist Dataset
 
 - After sampling 1000 playlists out of eligible 1852 playlists, we constructed initial data structure as a Pandas DataFrame. The initial data structure contains all the information provided by the Million Playlist Dataset.
     - For each playlist, available data are:
@@ -814,7 +814,7 @@ display(playlists_df_short.shape)
 
 - As shown, the initial data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 19, but only 10 of them are numeric, indicating there are not enough numeric data to build model and make prediction.
 
-### (2) Data Scraping from Spotify API
+### [2] Data Scraping from Spotify API
 
 - As mentioned above, by using `album_uri`, `artist_uri`, and `track_uri` in the intial data structure, we can scrape more data using Spotify API. We have created custom python functions to scrape information using different Spotify API function endpoints.
 
@@ -928,7 +928,7 @@ def AddRelatedArtists(df, ind, sp):
 ```
 
 
-### (3) Data Scraping from Genius API and Lyrics Wiki
+### [3] Data Scraping from Genius API and Lyrics Wiki
 
 - As mentioned above, by scraping Genius API and Lyrics Wiki, we can get lyrics data where we can get more information by using natural language processing. As both database have many missing data, we have used both databases to minimize the possibility of missing data.
 
@@ -2567,9 +2567,9 @@ display(playlists_df_full_section3_3.shape)
 
 - As shown, the final scraped data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 185 and 154 of them are numeric.
 
-### (4) Add Secondary Variables (Top Tracks of an Artist)
+### [4] Add Secondary Variables (Top Tracks of an Artist)
 
-- A group of the metrics that we added in Section 3-(2) was the list of top tracks of the artist (track URI in String), and this has to be converted into numeric form to run models. We encoded this information by using one-hot encoding, so that:
+- A group of the metrics that we added in Section 3)-[2] was the list of top tracks of the artist (track URI in String), and this has to be converted into numeric form to run models. We encoded this information by using one-hot encoding, so that:
     - If the track is the 0th top track of the artist, `is_top_track_0` will be 1, and all the others will be 0.
     - If the track is the 1th top track of the artist, `is_top_track_1` will be 1, and all the others will be 0.
     - ...
@@ -4224,7 +4224,7 @@ display(playlists_df_full_section3_4.shape)
 
 - As shown, the final data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 196 and 165 of them are numeric.
 
-## 4. Exploratory Data Analysis (EDA)
+## 4) Exploratory Data Analysis (EDA)
 
 - Below we include some key exploratory data analysis results, using the the dataframe `playlists_df_full_section3_4` that we have built so far.
 
@@ -4252,7 +4252,7 @@ feature_lists = ["year", "danceability", "energy", "key", "loudness", "mode", "s
 ```
 
 
-### (1) Global Properties
+### [1] Global Properties
 
 - First, below shows the distribution of the 14 key numeric variables over the entire 55000 tracks:
 
@@ -4277,7 +4277,7 @@ for i in range(7):
 
 
 
-- In general, these distributions are similar to the distributions in 1.(2), which presented by Spotify, indicating our 55000 samples reasonably represent the whole population.
+- In general, these distributions are similar to the distributions in Section 1)-[2], which presented by Spotify, indicating our 55000 samples reasonably represent the whole population.
 
 - Below, we have generated the inter-dependency plot, by defining a custon function `draw_inter_dependencies`:
 
