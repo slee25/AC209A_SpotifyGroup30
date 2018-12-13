@@ -38,3 +38,9 @@ nav_include: 6
 ### 3) Hyper parameter tuning (with cross validation)
 
 - We chose our final model as an auto encoder. However, there are a lot of hyperparameters that we can tune (architecture of the neural network, activation function, loss function, optimizer, # of epoch, etc.). We ended up using our default choice for the final model, but if we can do hyper parameter tuning with cross validation, the performance of our model would be improved a lot.
+
+### 4) Different K values - model
+
+- In this project, we used K = 25, N = 55 only. However, we could train our autoencoder model on different K values. Maybe, we can see that just simple average model would outperform than the auto encoder model for the different K values. Comparing the performance between autoencoder model and simple average model on different K values could be an interesting thing for the future work.
+
+- Furthermore, for the future work, we can try K = 0 case (Cold Start Problem) as well. In this case, we need to train our model only based on the playlist's metadata. Thus, it will be pretty difficult problem.
