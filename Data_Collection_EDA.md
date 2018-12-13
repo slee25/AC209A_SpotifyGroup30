@@ -1,4 +1,3 @@
-
 ---
 title: Data Collection and EDA
 notebook: notebooks/Data_Collection_EDA.ipynb
@@ -13,10 +12,8 @@ nav_include: 1
 
 
 
+
 - All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
-
-
-
 
 ## 1. Research on Available Databases
 
@@ -388,7 +385,7 @@ mode(playlist_stat[:,4])
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_31_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_32_0.png)
 
 
 
@@ -418,7 +415,7 @@ plt.show()
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_34_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_35_0.png)
 
 
 
@@ -4276,7 +4273,7 @@ for i in range(7):
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_70_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_71_0.png)
 
 
 
@@ -4324,7 +4321,7 @@ draw_inter_dependencies(playlists_df_full_section3_4[feature_lists], 'Inter-depe
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_74_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_75_0.png)
 
 
 
@@ -4357,7 +4354,7 @@ ax.set_title('Distribution of genre of the track', fontsize=30, y = 1.05);
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_77_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_78_0.png)
 
 
 
@@ -4405,7 +4402,7 @@ fig.suptitle('Distribution of genre of the track (for each playlist)', fontsize=
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_79_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_80_0.png)
 
 
 
