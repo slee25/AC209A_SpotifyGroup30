@@ -5,69 +5,16 @@ nav_include: 5
 ---
 
 
+- All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
+
+
 ## Contents
 {:.no_toc}
 *  
 {: toc}
 
 
-```python
-import warnings
-
-import sys
-import numpy as np
-import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
-import seaborn as sns
-from pandas.plotting import scatter_matrix
-import random
-import keras
-from keras.layers import Conv2D, MaxPooling2D, Dense, Input, Flatten, Dropout, UpSampling2D, GlobalAveragePooling2D, Reshape, MaxPooling1D, Lambda
-from keras.models import Model, Sequential
-from keras.optimizers import Adam, SGD
-import matplotlib.pyplot as plt
-from keras.utils import np_utils
-from keras.datasets import cifar10
-from keras.engine.topology import Layer
-import tensorflow as tf
-from keras import backend as K
-
-import json
-
-from bs4 import BeautifulSoup
-import requests
-import time
-
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.preprocessing import MinMaxScaler, StandardScaler
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import KFold
-from sklearn.model_selection import train_test_split
-from sklearn.manifold import MDS
-
-
-# Spotify
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-client_credentials_manager = SpotifyClientCredentials(client_id='e6ff82a6418a4191a5b3a95622faf5dd', client_secret='a37b632dc07d4136902fa95ec56281d3')
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-
-# Genius
-Genius_TOKEN = 'C2ow8dBpT2W5ORhiqaiz8ht8zLs9UzjFJQS5fwsmkRwWZyj8Wi1dA37FXYjScYuu'
-
-import re
-
-pd.set_option('display.width', 1500) 
-pd.set_option('display.max_columns', 200)
-```
-
-
-
-
-    Using TensorFlow backend.
+Using TensorFlow backend.
     
 
 
