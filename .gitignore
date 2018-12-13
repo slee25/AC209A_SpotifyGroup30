@@ -3,5 +3,7 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-notebooks/data/playlists_df_full_part2.pkl
-notebooks/data/playlists_df_full_part3.pkl
+notebooks/data/playlist_stat.pkl
+notebooks/data/playlists_df_short.pkl
+notebooks/data/playlists_df_full_section3_3.pkl
+notebooks/data/playlists_df_full_section3_4.pkl
