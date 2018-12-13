@@ -5,17 +5,18 @@ nav_include: 1
 ---
 
 
+- All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
+
+
 ## Contents
 {:.no_toc}
 *  
 {: toc}
 
 
+## 1) Research on Available Databases
 
-
-## 1. Research on Available Databases
-
-### (1) Million Playlist Dataset
+### [1] Million Playlist Dataset
 
 - Million Playlist Dataset is a very large playlist dataset provided by Spotify, particularly prepared for RecSys Challenge 2018 (https://recsys-challenge.spotify.com/). It consists of 1000 files in .json format, and each file contains 1000 user-created playlists, which makes 1 million playlists in 5.4 GB. The dataset was generated in December, 2017.
 
@@ -44,7 +45,7 @@ nav_include: 1
         - `album_name` (string): The name of the album of the track.
 
 
-- Below will show an example data format for the 0th playlist in the 0th file (output hidden):
+- Below will show an example data format for the 0th playlist in the 0th file (its output is currently hidden):
 
 
 ```python
@@ -63,7 +64,7 @@ playlist_data['playlists'][0]
     - As the entire dataset is too large, data resizing (resampling) is required.
     - Although not many types of data are available in the dataset, but it does provide URIs for track, artist, and album for each track, which can be used in Spotify API to query more data (see below).
 
-### (2) Spotify Web API
+### [2] Spotify Web API
 
 - Spotify Web API (https://developer.spotify.com/documentation/web-api/) is a developer's tool provided by Spotify, particularly for developing web applications related to Spotify. Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue. Web API also provides access to user related data, like playlists and music that the user saves in the Your Music library. Such access is enabled through selective authorization, by the user. The API provides a set of endpoints, each with its own unique path. To access private data through the Web API, such as user profiles and playlists, an application must get the user's permission to access the data. Authorization is via the Spotify Accounts service.
 
@@ -92,7 +93,7 @@ playlist_data['playlists'][0]
     - `uri` (string): The `Spotify URI` for the track.
     
     
-- Below will show an example data provided by `spotipy.Spotify().track(track_uri)` for the 0th track in the 0th playlist in the 0th file (output hidden):
+- Below will show an example data provided by `spotipy.Spotify().track(track_uri)` for the 0th track in the 0th playlist in the 0th file  (its output is currently hidden):
 
 
 ```python
@@ -117,46 +118,13 @@ sp.track(TRACK_URI)
     - `uri` (string): The `Spotify URI` for the artist.
 
 
-- Below shows an example data provided by `spotipy.Spotify().artist(artist_uri)` for the artist of the 0th track in the 0th playlist in the 0th file:
+- Below will show an example data provided by `spotipy.Spotify().artist(artist_uri)` for the artist of the 0th track in the 0th playlist in the 0th file (its output is currently hidden):
 
 
 ```python
 ARTIST_URI = playlist_data['playlists'][0]['tracks'][0]['artist_uri']
 sp.artist(ARTIST_URI)
 ```
-
-
-
-
-
-
-
-    {'external_urls': {'spotify': 'https://open.spotify.com/artist/2wIVse2owClT7go1WT98tk'},
-     'followers': {'href': None, 'total': 909727},
-     'genres': ['dance pop',
-      'hip hop',
-      'hip pop',
-      'pop',
-      'pop rap',
-      'r&b',
-      'rap',
-      'southern hip hop',
-      'urban contemporary'],
-     'href': 'https://api.spotify.com/v1/artists/2wIVse2owClT7go1WT98tk',
-     'id': '2wIVse2owClT7go1WT98tk',
-     'images': [{'height': 640,
-       'url': 'https://i.scdn.co/image/055260c034b93dae018b8cd70bc9f1acc2843af3',
-       'width': 640},
-      {'height': 320,
-       'url': 'https://i.scdn.co/image/2642935f38deb4f2305cabfd996babec8796d469',
-       'width': 320},
-      {'height': 160,
-       'url': 'https://i.scdn.co/image/11323b9db35fb2b10c1676a0eeeb5ff8a4ed32e8',
-       'width': 160}],
-     'name': 'Missy Elliott',
-     'popularity': 76,
-     'type': 'artist',
-     'uri': 'spotify:artist:2wIVse2owClT7go1WT98tk'}
 
 
 
@@ -184,7 +152,7 @@ sp.artist(ARTIST_URI)
     - `uri` (string): The `Spotify URI` for the album.
 
 
-- Below will show an example data provided by `spotipy.Spotify().album(album_uri)` for the album of the 0th track in the 0th playlist in the 0th file (output hidden):
+- Below will show an example data provided by `spotipy.Spotify().album(album_uri)` for the album of the 0th track in the 0th playlist in the 0th file (its output is currently hidden:
 
 
 ```python
@@ -286,7 +254,7 @@ sp.audio_features(TRACK_URI)
     - `artists` (array of `artist objects`): Up to 20 related artists to the artist.
 
 
-- Below shows an example data provided by `spotipy.Spotify().artist_related_artists(artist_uri)` for the artist of the 0th track in the 0th playlist in the 0th file:
+- Below will show an example data provided by `spotipy.Spotify().artist_related_artists(artist_uri)` for the artist of the 0th track in the 0th playlist in the 0th file (its output is currently hidden):
 
 
 ```python
@@ -303,7 +271,7 @@ sp.artist_related_artists(ARTIST_URI)
     - `tracks` (array of `track objects`): Up to 10 top tracks of the artist.
 
 
-- Below shows an example data provided by `spotipy.Spotify().artist_top_tracks(artist_uri)` for the artist of the 0th track in the 0th playlist in the 0th file:
+- Below will show an example data provided by `spotipy.Spotify().artist_top_tracks(artist_uri)` for the artist of the 0th track in the 0th playlist in the 0th file (its output is currently hidden):
 
 
 ```python
@@ -318,7 +286,7 @@ sp.artist_top_tracks(ARTIST_URI)
 - Notes:
   - There may be high multicollinearity in these data, as these are a mix of primary and secondary information. For example, Spotify Web API explains that the danceability is based on other primary data including tempo, while the energy is based on some other primary data including loudness. Therefore, it would be important to find a method that are insensitive to the multicollinearity among columns.
 
-### (3) Genius API
+### [3] Genius API
 
 - Genius (https://genius.com/) is an American digital media library, particularly specialized for song lyrics and musical knowledge. Genius provides public Genius API where we can access lyrics data for songs.
 
@@ -329,7 +297,8 @@ sp.artist_top_tracks(ARTIST_URI)
 <img src="https://raw.githubusercontent.com/slee25/AC209A_SpotifyGroup30/master/notebooks/fig/Genius.png" width="635" height="460"  align="middle">
 
 
-- Below shows a html-parsed result of this page by using `requests` and `BeautifulSoup`:
+
+- Below will show a html-parsed result of this page by using `requests` and `BeautifulSoup` (its output is currently hidden):
 
 
 ```python
@@ -341,26 +310,19 @@ BeautifulSoup(requests.get(GeniusURL).text,'html.parser')
 
 
 
-- Using Genius API, this information is more easily accessible.
+- Using Genius API, this information is more easily accessible (its output is currently hidden):
 
 
 ```python
-requests.get('https://api.genius.com', data={'q': 'Lose Control Missy Elliott'}, headers={'Authorization': 'Bearer ' + Genius_TOKEN}).text
+GeniusAPIURL = 'https://api.genius.com/search'
+BeautifulSoup(requests.get(GeniusAPIURL, data={'q': 'Lose Control Missy Elliott'}, headers={'Authorization': 'Bearer ' + Genius_TOKEN}).text, 'html.parser')
 ```
 
 
 
 
 
-
-
-    '{"meta":{"status":403,"message":"Action forbidden for current scope"}}'
-
-
-
-
-
-### (4) Lyrics Wiki
+### [4] Lyrics Wiki
 
 - Lyrics Wiki (http://lyrics.wikia.com/wiki/LyricWiki) is a large database for lyrics. Lyrics for a certain song can be scraped at http://lyrics.wikia.com/wiki/[artist_name]:[track_name].
 
@@ -370,7 +332,8 @@ requests.get('https://api.genius.com', data={'q': 'Lose Control Missy Elliott'},
 <img src="https://raw.githubusercontent.com/slee25/AC209A_SpotifyGroup30/master/notebooks/fig/LyricsWiki.png" width="635" height="460"  align="middle">
 
 
-- Below shows a html-parsed result of this page by using `requests` and `BeautifulSoup`:
+
+- Below shows a html-parsed result of this page by using `requests` and `BeautifulSoup` (its output is currently hidden):
 
 
 ```python
@@ -382,7 +345,7 @@ BeautifulSoup(requests.get(LyricsWikiURL).text,'html.parser')
 
 
 
-## 2. Data Resampling
+## 2) Data Resampling
 
 - As mentioned earlier, the Million Playlist Dataset is too large to handle, we have decided to resize/resample the data.
 
@@ -394,7 +357,7 @@ BeautifulSoup(requests.get(LyricsWikiURL).text,'html.parser')
     - Among the playlists that meets the criteria above, randomly sample 1000 playlists.
         - We may select 1000 playlists in the order of the number of followers, but in this way, the samples may also be biased by having too popular musics only.
 
-- The `playlist_stat.npy` below contains pre-prepared data (separate ipynb and pdf are attached) for the number of followers and the number of tracks in the Million Playlist:
+- The `playlist_stat.npy` below contains pre-prepared data (separate ipynb and pdf are attached: `Data_Collection_EDA_Section2.ipynb`) for the number of followers and the number of tracks in the Million Playlist:
 
 
 ```python
@@ -421,7 +384,7 @@ mode(playlist_stat[:,4])
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_31_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_32_0.png)
 
 
 
@@ -451,7 +414,7 @@ plt.show()
 
 
 
-![png](Data_Collection_EDA_files/Data_Collection_EDA_34_0.png)
+![png](Data_Collection_EDA_files/Data_Collection_EDA_35_0.png)
 
 
 
@@ -503,11 +466,11 @@ print(5, '\t\t', sum(playlist_stat_55[:,3]>=5))
 
 
 
-- This indicates that, if we select the lower bound of the number of followers as 20 based on the criteria above, 1852 playlists out of 1 million will be eligible. We believe 1852 to 1000 is a reasonable down-sampling rate, so we sampled 1000 playlists among these 1852 playlists by using `np.random.seed(0)` and `np.random.choice` (separate ipynb and pdf are attached).
+- This indicates that, if we select the lower bound of the number of followers as 20 based on the criteria above, 1852 playlists out of 1 million will be eligible. We believe 1852 to 1000 is a reasonable down-sampling rate, so we sampled 1000 playlists among these 1852 playlists by using `np.random.seed(0)` and `np.random.choice` (separate ipynb and pdf are attached: `Data_Collection_EDA_Section2.ipynb`).
 
-## 3. Scaping and Constructing Data Structure
+## 3) Scaping and Constructing Data Structure
 
-### (1) Initial Data Structure from Million Playlist Dataset
+### [1] Initial Data Structure from Million Playlist Dataset
 
 - After sampling 1000 playlists out of eligible 1852 playlists, we constructed initial data structure as a Pandas DataFrame. The initial data structure contains all the information provided by the Million Playlist Dataset.
     - For each playlist, available data are:
@@ -533,14 +496,14 @@ print(5, '\t\t', sum(playlist_stat_55[:,3]>=5))
         - `album_name` (string): The name of the album of the track.
 - For each playlist, we select the first 55 tracks, so that all playlists have the same contribution to the model. This will makes the number of tracks 550000.
 
-- The `playlists_df_sort.pkl` below contains pre-prepared data (separate ipynb and pdf are attached) for initial data structure contains 550000 tracks from the 1000 playlists.
+- The `playlists_df_short.pkl` below contains pre-prepared data (separate ipynb and pdf are attached: `Data_Collection_EDA_Section3-1.ipynb`) for initial data structure contains 550000 tracks from the 1000 playlists.
 
 
 ```python
-playlists_df_sort = pd.read_pickle('data/playlists_df_sort.pkl')
-display(playlists_df_sort.head())
-display(playlists_df_sort.describe())
-display(playlists_df_sort.shape)
+playlists_df_short = pd.read_pickle('data/playlists_df_short.pkl')
+display(playlists_df_short.head())
+display(playlists_df_short.describe())
+display(playlists_df_short.shape)
 ```
 
 
@@ -851,7 +814,7 @@ display(playlists_df_sort.shape)
 
 - As shown, the initial data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 19, but only 10 of them are numeric, indicating there are not enough numeric data to build model and make prediction.
 
-### (2) Data Scraping from Spotify API
+### [2] Data Scraping from Spotify API
 
 - As mentioned above, by using `album_uri`, `artist_uri`, and `track_uri` in the intial data structure, we can scrape more data using Spotify API. We have created custom python functions to scrape information using different Spotify API function endpoints.
 
@@ -965,7 +928,7 @@ def AddRelatedArtists(df, ind, sp):
 ```
 
 
-### (3) Data Scraping from Genius API and Lyrics Wiki
+### [3] Data Scraping from Genius API and Lyrics Wiki
 
 - As mentioned above, by scraping Genius API and Lyrics Wiki, we can get lyrics data where we can get more information by using natural language processing. As both database have many missing data, we have used both databases to minimize the possibility of missing data.
 
@@ -973,14 +936,14 @@ def AddRelatedArtists(df, ind, sp):
 - Of note, unlike Spotify API where we can directly use the URIs for the track, artist, and albums, for lyrics we had to rely on search query given to the databases. Thus, we have tried as many as possible combinations of the search terms and have tried to deal with special cases (special letters, languages other than English, etc.). Thus, this part of the code is quite long and messy, so we decide to not include here, but we attach as separate files.
 
 
-- The `playlists_df_full_part2.pkl` below contains pre-prepared data (separate ipynb and pdf are attached) for final data structure contains 550000 tracks with all scraped data.
+- The `playlists_df_full_section3_3.pkl` below contains pre-prepared data (separate ipynb and pdf are attached: `Data_Collection_EDA_Section3-2-1.ipynb` and `Data_Collection_EDA_Section3-3.ipynb`) for final data structure contains 550000 tracks with all scraped data.
 
 
 ```python
-playlists_df_full_part2 = pd.read_pickle('data/playlists_df_full_part2.pkl')
-display(playlists_df_full_part2.head())
-display(playlists_df_full_part2.describe())
-display(playlists_df_full_part2.shape)
+playlists_df_full_section3_3 = pd.read_pickle('data/playlists_df_full_section3_3.pkl')
+display(playlists_df_full_section3_3.head())
+display(playlists_df_full_section3_3.describe())
+display(playlists_df_full_section3_3.shape)
 ```
 
 
@@ -2604,9 +2567,9 @@ display(playlists_df_full_part2.shape)
 
 - As shown, the final scraped data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 185 and 154 of them are numeric.
 
-### (4) Add Secondary Variables (Top Tracks of an Artist)
+### [4] Add Secondary Variables (Top Tracks of an Artist)
 
-- A group of the metrics that we added in Section 3-(2) was the list of top tracks of the artist (track URI in String), and this has to be converted into numeric form to run models. We encoded this information by using one-hot encoding, so that:
+- A group of the metrics that we added in Section 3)-[2] was the list of top tracks of the artist (track URI in String), and this has to be converted into numeric form to run models. We encoded this information by using one-hot encoding, so that:
     - If the track is the 0th top track of the artist, `is_top_track_0` will be 1, and all the others will be 0.
     - If the track is the 1th top track of the artist, `is_top_track_1` will be 1, and all the others will be 0.
     - ...
@@ -2617,7 +2580,7 @@ display(playlists_df_full_part2.shape)
 
 
 ```python
-playlists_df = pd.read_pickle('data/playlists_df_full_part2.pkl')
+playlists_df = pd.read_pickle('data/playlists_df_full_section3_3.pkl')
 for i in range(1): #55000 for running all 55000 tracks
     playlists_df.at[i, 'is_top_track'] = 10
     
@@ -2630,14 +2593,14 @@ for i in range(1): #55000 for running all 55000 tracks
 ```
 
 
-- The `playlists_df_full_part3.pkl` below contains pre-prepared data (separate ipynb and pdf are attached) for final data structure contains 550000 tracks with additional secondary variables.
+- The `playlists_df_full_section3_4.pkl` below contains pre-prepared data (separate ipynb and pdf are attached: `Data_Collection_EDA_Section3-4.ipynb`) for final data structure contains 550000 tracks with additional secondary variables.
 
 
 ```python
-playlists_df_full_part3 = pd.read_pickle('data/playlists_df_full_part3.pkl')
-display(playlists_df_full_part3.head())
-display(playlists_df_full_part3.describe())
-display(playlists_df_full_part3.shape)
+playlists_df_full_section3_4 = pd.read_pickle('data/playlists_df_full_section3_4.pkl')
+display(playlists_df_full_section3_4.head())
+display(playlists_df_full_section3_4.describe())
+display(playlists_df_full_section3_4.shape)
 ```
 
 
@@ -4261,10 +4224,196 @@ display(playlists_df_full_part3.shape)
 
 - As shown, the final data structure contains 55000 track data (1000 playlists * 55 tracks/playlist), and the number of columns is 196 and 165 of them are numeric.
 
-## 4. Exploratory Data Analysis (EDA)
+## 4) Exploratory Data Analysis (EDA)
+
+- Below we include some key exploratory data analysis results, using the the dataframe `playlists_df_full_section3_4` that we have built so far.
+
+
+- EDA has been done for 14 key numeric variables, as follows:
+    - `year`
+    - `danceability`
+    - `energy`
+    - `key`
+    - `loudness`
+    - `mode`
+    - `speechiness`
+    - `acousticness`
+    - `instrumentalness`
+    - `liveness`
+    - `valence`
+    - `tempo`
+    - `popularity`
+    - `is_top_track`
 
 
 ```python
-
+feature_lists = ["year", "danceability", "energy", "key", "loudness", "mode", "speechiness", "acousticness",
+                 "instrumentalness", "liveness", "valence", "tempo", "popularity", "is_top_track"]
 ```
 
+
+### [1] Global Properties
+
+- First, below shows the distribution of the 14 key numeric variables over the entire 55000 tracks:
+
+
+```python
+fig, ax = plt.subplots(7, 2, figsize = (12,30))
+
+cnt = 0
+for i in range(7):
+    for j in range(2):
+        ax[i,j].hist(playlists_df_full_section3_4[feature_lists[cnt]].dropna(), bins=30)
+        ax[i,j].set_title(feature_lists[cnt], fontsize=20)
+        cnt = cnt +1
+```
+
+
+
+
+
+![png](Data_Collection_EDA_files/Data_Collection_EDA_71_0.png)
+
+
+
+
+- In general, these distributions are similar to the distributions in Section 1)-[2], which presented by Spotify, indicating our 55000 samples reasonably represent the whole population.
+
+- Below, we have generated the inter-dependency plot, by defining a custon function `draw_inter_dependencies`:
+
+
+```python
+def draw_inter_dependencies(feature_arg, title_arg : str):
+    '''
+    Input
+        feature_arg : feature data of which we will draw distribution
+        title_arg : title of the plot
+    '''
+    ax = scatter_matrix(feature_arg, alpha=0.2, figsize=(18,20), diagonal='kde', range_padding = 0.25)
+
+    for aa in np.arange(ax.shape[0]):
+        for bb in np.arange(ax.shape[1]):
+            ax[aa,bb].tick_params(labelsize=12)
+            ax[aa,bb].tick_params(axis='both', labelrotation=45)
+            ax[aa,bb].xaxis.label.set_size(15)
+            ax[aa,bb].yaxis.label.set_size(15)
+            
+            if (bb % 2 == 0):
+                ax[aa,bb].xaxis.set_label_coords(0.5,-0.5)
+            else:
+                ax[aa,bb].xaxis.set_label_coords(0.5,-0.75)
+            if (aa % 2 == 0):
+                ax[aa,bb].yaxis.set_label_coords(-0.75,0.5)
+            else:
+                ax[aa,bb].yaxis.set_label_coords(-1.0,0.5)
+
+    plt.suptitle(title_arg, fontsize=25,y=0.9);
+```
+
+
+
+```python
+draw_inter_dependencies(playlists_df_full_section3_4[feature_lists], 'Inter-dependencies among all predictors')
+```
+
+
+
+
+
+![png](Data_Collection_EDA_files/Data_Collection_EDA_75_0.png)
+
+
+
+
+- As shown above, although there seems to be some interdependency between metrics, most likely they distribute widely to each other.
+
+- As for categorical variables, we have included genres of the artist. The distribution of genres for the entire 55000 tracks is like below:
+
+
+```python
+genre_lists = sp.recommendation_genre_seeds()['genres']
+nonzero_genre_temp = (np.sum(playlists_df_full_section3_4[genre_lists]) != 0)
+nonzero_genre = [ele for ele in nonzero_genre_temp[nonzero_genre_temp.values].index]
+
+fig, ax = plt.subplots(1, 1, figsize = (20, 8))
+
+ind = np.arange(len(nonzero_genre))
+ax.bar(ind, playlists_df_full_section3_4[nonzero_genre].sum().values, 0.4, color='b')
+
+ax.tick_params(labelsize = 20)
+ax.tick_params(axis='x', rotation = 90)
+ax.set_xticks(ind)
+ax.set_xticklabels(nonzero_genre, fontsize=5)
+
+ax.grid(True, lw =  1.5, ls = '--', alpha = 0.75)
+ax.set_title('Distribution of genre of the track', fontsize=30, y = 1.05);
+```
+
+
+
+
+
+![png](Data_Collection_EDA_files/Data_Collection_EDA_78_0.png)
+
+
+
+
+- As shown above, the `pop` genre is predominant against the other genres, taking 30% of the entire data points, but still there are other genres that have significant number of tracks.
+
+
+- More interestingly, we can plot the distribution of the genre within each playlist, so that we can see a possibiliyt of discriminating playlists by looking at their genres. Below shows the distribution of the genres of the first 20 playlists.
+
+
+```python
+fig, ax = plt.subplots(10, 2, figsize = (30, 70))
+plt.subplots_adjust(hspace = 1.0)
+
+ind = np.arange(len(nonzero_genre))
+width = 0.7
+
+cnt = 0
+for pid in playlists_df_full_section3_4.groupby('pid').sum()[nonzero_genre].index[:20]:
+
+    ax_temp = ax[cnt//2, cnt%2]
+    ax_temp.bar(ind, playlists_df_full_section3_4.groupby('pid').sum()[nonzero_genre].loc[pid].values, 
+           width, color='b', label = 'playlist ' + str(pid))
+    
+    ax_temp.tick_params(labelsize = 15)
+    ax_temp.tick_params(axis='x', rotation = 90)
+    if cnt == len(nonzero_genre)-1:
+        ax_temp.set_xticks(ind)
+    
+    # Make labels
+    if cnt%2 == 0:
+        ax_temp.set_ylabel('# of tracks',fontsize=20)
+    ax_temp.set_xticks(ind)
+    ax_temp.set_xticklabels(nonzero_genre, fontsize=3)
+    
+    ax_temp.legend(fontsize=15)
+    ax_temp.grid(True, lw =  1.5, ls = '--', alpha = 0.75)
+    
+    cnt += 1
+
+fig.suptitle('Distribution of genre of the track (for each playlist)', fontsize=30, y = 0.89);
+```
+
+
+
+
+
+![png](Data_Collection_EDA_files/Data_Collection_EDA_80_0.png)
+
+
+
+
+- As shown above, each playlist has a distinct distribution of genres. For example,
+    - For most playlists, the `pop` genre is predominant. However,
+    - For playlist 2349, the `emo` genre (a rock music genre characterized by an emphasis on emotional expression) is predominant.
+    - For playlist 13856, the `electronics` genre is predominant.
+    - For playlist 14506, the `rock` genre is predominant.
+    - For playlist 18659, the `country` genre is predominant.
+    - For playlist 18833, the `edm` genre is predominant.
+    - For playlist 19447, the `metalcore` genre is predominant.
+
+
+- Thus, we may predict that a song with genre of `metalcore` is likely to be in the playlist 19447, which is very promising.
