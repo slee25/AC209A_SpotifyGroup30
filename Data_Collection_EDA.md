@@ -1,5 +1,17 @@
 
-# Data Collection and EDA
+---
+title: Data Collection and EDA
+notebook: notebooks/Data_Collection_EDA.ipynb
+nav_include: 1
+---
+
+
+## Contents
+{:.no_toc}
+*  
+{: toc}
+
+
 
 - All detailed codes and data are attached to the submission. For simplicity, we don't include all codes and data here in the website (final report).
 
