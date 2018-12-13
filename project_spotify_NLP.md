@@ -1,5 +1,5 @@
 ---
-title: Natural Language Processing
+title: NLP
 notebook: notebooks/project_spotify_NLP.ipynb
 nav_include: 2
 ---
